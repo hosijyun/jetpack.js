@@ -1,0 +1,54 @@
+<script type="text/html" id="pages/p14_room_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="room-page template">
+            $banner$
+            $backgroundImage$
+            <!-- @uberText@ -->
+            <description maxLines="3">@text@</description>
+            <!-- @/uberText@ -->
+            $content$
+            $account$
+            $emailSupportLink$
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="p14_room_sort_tab_iphone">
+    <section>
+        $lockups$
+    </section>
+</script>
+
+<script type="text/html" id="pages/p14_rotten_tomatoes_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="template">
+            <row><column/></row>
+            <row>
+                <column>
+                    <lockup>
+                        <list>
+                            <badge src="@imgSrc@" class="tomato-header-badge-icon" @attributes@/>
+                            <text class="tomato-header-badge-percentage @classes@">@tomatometerPercentage@</text>
+                        </list>
+                    </lockup>
+                </column>
+                <column>
+                    @statistics@
+                </column>
+            </row>
+            @reviews@
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/p14_tv_episode_page/details_tab">
+    $description$
+    @hdSdToggle@
+</script>
