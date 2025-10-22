@@ -1,0 +1,4357 @@
+<script type="text/html" id="utils/dv14_badge_util/badge">
+    <badge class="@badgeClass@" width="@badgeWidth@" height="@badgeHeight@" src="@resource@"
+        <!-- @hasAltText@ -->
+            accessibilityText="@altText@"
+        <!-- @/hasAltText@ -->
+    />
+</script>
+
+<script type="text/html" id="utils/dv14_badge_util/badge_as_image">
+    <img class="@badgeClass@" width="@badgeWidth@" height="@badgeHeight@" src="@resource@"
+    <!-- @hasAltText@ -->
+    accessibilityText="@altText@"
+    <!-- @/hasAltText@ -->
+    />
+</script>
+
+<script type="text/html" id="utils/dv14_badge_util/editorial_badge">
+    <badge class="editorial-badge" content="@badgeText@"/>
+</script>
+
+<script type="text/html" id="utils/dv14_badge_util/badge_text_only">
+	<badge class="@badgeClass@" text="@badgeText@" />
+</script>
+<script type="text/html" id="utils/dv14_product_page_util/description">
+    <section>
+        <!-- @titleBlock@ -->
+        <header>
+            <title>@title@</title>
+        </header>
+        <!-- @/titleBlock@ -->
+        <description>@descriptionText@</description>
+    </section>
+    <divider class="divider"/>
+</script><script type="text/html" id="utils/dv14_user_ratings_util/small_star">
+    <starRating value="@value@" type="small" disabled="true">(<number class="star-rating">@count@</number>)</starRating>
+</script>
+
+<script type="text/html" id="utils/dv14_user_ratings_util/write_a_review">
+    <document>
+        <writeAReviewTemplate src="@url@" data-content-id="@adamId@"></writeAReviewTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="utils/dv14_user_ratings_util/report_a_concern">
+    <document>
+        <reportAConcernTemplate src="@url@" data-content-id="@itemId@" data-explanation="@explanation@">
+            <title>@title@</title>
+            <!-- @reasonsLoop@ -->
+            <reason data-content-id="@reasonId@" data-uppercase-name="@uppercaseName@">@name@</reason>
+            <!-- @/reasonsLoop@ -->
+            <subtitle>@subtitle@</subtitle>
+            <text>@privacy@</text>
+        </reportAConcernTemplate>
+    </document>
+</script><script type="text/html" id="components/dv14_additional_app_types_OS10">
+    <stackList @attributes@ class="@classes@">
+        <!-- @ItemLoop@ -->
+        @item@
+        <!-- @/ItemLoop@ -->
+    </stackList>
+</script>
+
+<script type="text/html" id="components/dv14_additional_app_types/offer_detail_OS10">
+    <item @attributes@ disabled="true">
+        <!-- @BadgesLoop@ -->
+        @badge@
+        <!-- @/BadgesLoop@ -->
+        @title@
+    </item>
+</script>
+
+<script type="text/html" id="components/dv14_additional_app_types">
+    <!-- @LockupLoop@ -->
+        @lockup@
+    <!-- @/LockupLoop@ -->
+</script>
+
+<script type="text/html" id="components/dv14_additional_app_types/offer_detail">
+    <lockup type="list" class="align-left" @attributes@ disabled="true">
+        <!-- @BadgesLoop@ -->
+        @badge@
+        <!-- @/BadgesLoop@ -->
+        @title@
+    </lockup>
+</script>
+
+<script type="text/html" id="components/dv14_additional_app_types/multi_offer_detail">
+    <list class="align-left">
+        <!-- @BadgesLoop@ -->
+        @badge@
+        <!-- @/BadgesLoop@ -->
+        @title@
+    </list>
+</script><script type="text/html" id="components/apple_pack">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate>
+            $navigationBar$
+            <text></text>
+            <text></text>
+            <text class="apple-pack-header" maxLines="0">@applePackHeader@</text>
+            <text></text>
+            $downloadAll$
+            $grid$
+            <text></text>
+            <text class="apple-pack-footer">@disclaimer@</text>
+            @legal@
+            <text></text>
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/apple_pack/navigation_bar">
+    <navigationBar>
+        <title>@title@</title>
+        $cancelButton$
+    </navigationBar>
+</script>
+
+<script type="text/html" id="components/apple_pack/download_all_button">
+    <button class="button-color">@buttonText@</button>
+</script><script type="text/html" id="components/dv14_brick">
+  <lockup class="@classes@" @attributes@>
+      @artwork@
+  </lockup>
+</script>
+
+<script type="text/html" id="components/dv14_timer_brick">
+  <counter type="timer" class="@classes@" @attributes@>
+      @artwork@
+  </counter>
+</script>
+
+<script type="text/html" id="components/dv14_counter_brick">
+  <counter type="number" class="@classes@" @attributes@>
+      @artwork@
+  </counter>
+</script><script type="text/html" id="components/dv14_buy_button">
+    <button class="@classes@" @attributes@>@actionText@</button>
+</script><script type="text/html" id="components/category_sheet">
+    <document>
+        <head>
+          $styles$
+        </head>
+       <stackTemplate>
+           @navigationBar@
+           <grid class="category-sheet">
+               @lockups@
+           </grid>
+       </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/category_sheet/navigation_bar">
+    <navigationBar>
+        <!-- @navigationTitleBlock@ -->
+        <navigationTitle>@navigationTitle@</navigationTitle>
+        <!-- @/navigationTitleBlock@ -->
+        <title>@title@</title>
+        <!-- @cancelBlock@ -->
+        @cancelButton@
+        <!-- @/cancelBlock@ -->
+    </navigationBar>
+</script>
+<script type="text/html" id="components/dv14_charts_column">
+    <column class="no-borders-grid">
+        <header>
+            <title>@title@</title>
+        </header>
+    </column>
+</script>
+<script type="text/html" id="components/dv14_content_unavailable">
+  <contentUnavailable>
+    <img class="product-unavailable" src="@resource@"/>
+    <description maxLines="0">@message@</description>
+  </contentUnavailable>
+</script>
+<script type="text/html" id="components/dv14_collection_list">
+    <grid>
+        @content@
+    </grid>
+</script>
+
+<script type="text/html" id="components/dv14_collection_list/index_bar_entry">
+    <indexBarEntry visibility="required" targetIndexBarEntryID="@id@">
+        <text>@text@</text>
+    </indexBarEntry>
+</script>
+
+<script type="text/html" id="components/dv14_collection_list/collection_list_header">
+    <header class="collection-list-header" indexBarEntryID="@id@">
+        <title>@text@</title>
+    </header>
+</script>
+
+<script type="text/html" id="components/dv14_collection_list/collection_list_lockup">
+    <lockup class="collection-list-lockup">
+        <text>@text@</text>
+    </lockup>
+</script>
+<script type="text/html" id="components/charity_sheet">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <charityTemplate src="@dataUrl@" campaignID="@campaignId@"></charityTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/gift_sheet">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <giftTemplate type="money"> </giftTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_redeem_template">
+    <document>
+        <redeemTemplate class="template" code="@code@">
+        </redeemTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/dv14_description">
+    <section>
+        <!-- @titleBlock@ -->
+        <header>
+            <title>@title@</title>
+            <!-- @dateBlock@ -->
+            <text><date>@date@</date></text>
+            <!-- @/dateBlock@ -->
+        </header>
+        <!-- @/titleBlock@ -->
+        <description class="@classes@" @attributes@>@descriptionText@</description>
+    </section>
+    <!-- @showDivider@ -->
+        <divider class="divider"/>
+    <!-- @/showDivider@ -->
+</script><script type="text/html" id="components/dv14_extended_navigation_bar">
+    <navigationBar class="@class@">
+        <!-- @navigationTitleBlock@ -->
+        <navigationTitle>@navigationTitle@</navigationTitle>
+        <!-- @/navigationTitleBlock@ -->
+
+        $title$
+        @shareButton@
+        $genreButton$
+        @previewHistoryButton@
+        $searchField$
+        $searchButton$
+
+        $tabbedPane$
+        $pills$
+
+        <!-- @palette@ -->
+        <palette class="palette-center">
+            $paletteTabbedPane$
+        </palette>
+        <!-- @/palette@ -->
+    </navigationBar>
+</script>
+
+<script type="text/html" id="components/dv14_extended_navigation_bar/genre_button">
+    <button type="link" class="@class@">
+          <text>@categories@</text>
+    </button>
+</script>
+
+<script type="text/html" id="components/dv14_extended_navigation_bar/search_button">
+    <button type="image" class="@class@">
+        <img class="search-button-image" src="resource://search"/>
+    </button>
+</script>
+
+<script type="text/html" id="components/dv14_extended_navigation_bar/store_sheet">
+    <navigationBar>
+        <!-- @navigationTitleBlock@ -->
+        <navigationTitle>@navigationTitle@</navigationTitle>
+        <!-- @/navigationTitleBlock@ -->
+        @cancelButton@
+        $title$
+        $tabbedPane$
+        $pills$
+        @shareButton@
+        @storeButton@
+    </navigationBar>
+</script>
+
+<script type="text/html" id="components/dv14_extended_navigation_bar/atb_store_sheet">
+    <navigationBar>
+        @leftButton@
+        $tabbedPane$
+        $pills$
+        @rightButton@
+    </navigationBar>
+</script><script type="text/html" id="components/dv14_flowcase">
+    <carousel class="@className@" displayInterval="5" @attributes@>
+        <!-- @flowcaseItemLoop@ -->
+        $flowcaseItem$
+        <!-- @/flowcaseItemLoop@ -->
+    </carousel>
+</script><script type="text/html" id="components/dv14_flowcase_item">
+    <img class="@carouselItemClass@" id="@adamId@" width="@width@" height="@height@" src="@artworkUrl@" data-page-target="@pageTarget@" @attributes@/>
+</script><script type="text/html" id="components/dv14_gallery/lockup">
+    <lockup>
+        $media$
+        <!-- @titleBlock@ -->
+        <title>@title@</title>
+        <!-- @/titleBlock@ -->
+        <!-- @subtitleBlock@ -->
+        <subtitle>
+            $subtitle$
+        </subtitle>
+        <!-- @/subtitleBlock@ -->
+        <!-- @fullscreenImageBlock@ -->
+            $fullscreenImage$
+        <!-- @/fullscreenImageBlock@ -->
+    </lockup>
+</script><script type="text/html" id="components/dv14_grid">
+    <grid class="@classes@" @attributes@>
+        <!-- @titleBlock@ -->
+        <header>
+            <title>@title@</title>
+        </header>
+        <section/>
+        <!-- @/titleBlock@ -->
+     </grid>
+</script>
+
+<script type="text/html" id="components/dv14_grid_alternate">
+	<!-- @titleBlock@ -->
+    <header>
+        <title>@title@</title>
+    </header>
+    <!-- @/titleBlock@ -->
+    <grid class="@classes@" @attributes@ @itsId@></grid>
+</script><script type="text/html" id="components/dv14_info_list">
+    <!-- @titleBlock@ -->
+        <header>
+            <title>@title@</title>
+        </header>
+    <!-- @/titleBlock@ -->
+    <infoList type="@type@">
+        <!-- @infoListItem@ -->
+            @infoListItem@
+        <!-- @/infoListItem@ -->
+    </infoList>
+    <!-- @showDivider@ -->
+        <divider class="divider"/>
+    <!-- @/showDivider@ -->
+</script>
+
+<script type="text/html" id="components/dv14_info_list/item">
+    <info>
+        <title class="info-title" maxLines="0">@title@</title>
+        <!-- @textLoop@ -->
+            <!-- @textBlock@ -->
+                <text class="info-value" maxLines="0"><!-- @numberBlock@ --><number>@number@</number><!-- @/numberBlock@ -->@text@</text>
+            <!-- @/textBlock@ -->
+            <!-- @elementBlock@ -->
+                @element@
+            <!-- @/elementBlock@ -->
+            <!-- @linkBlock@ -->
+                <button type="link" data-url="@url@" class="info-value" maxLines="0">@text@</button>
+            <!-- @/linkBlock@ -->
+        <!-- @/textLoop@ -->
+    </info>
+</script><script type="text/html" id="components/dv14_navigation_bar">
+    <navigationBar>
+        <!-- @navigationTitleBlock@ -->
+            <navigationTitle>@navigationTitle@</navigationTitle>
+        <!-- @/navigationTitleBlock@ -->
+        $title$
+        @shareButton@
+        @previewHistoryButton@
+        $searchField$
+        $relatedSearches$
+        $tabbedPane$
+        $pills$
+        <!-- @palette@ -->
+        <palette class="align-center">
+        </palette>
+        <!-- @/palette@ -->
+    </navigationBar>
+</script>
+
+<script type="text/html" id="components/dv14_navigation_bar/store_sheet">
+    <navigationBar class="@class@">
+        <!-- @navigationTitleBlock@ -->
+        <navigationTitle>@navigationTitle@</navigationTitle>
+        <!-- @/navigationTitleBlock@ -->
+        @cancelButton@
+        $title$
+        @shareButton@
+        @storeButton@
+    </navigationBar>
+</script>
+
+<script type="text/html" id="components/dv14_navigation_bar/atb_store_sheet">
+    <navigationBar>
+        @leftButton@
+        @rightButton@
+    </navigationBar>
+</script>
+
+<!-- Facet Menus (for Search) -->
+<script type="text/html" id="pages/dv14_navigation_bar/facet_menus">
+    <!-- @menusLoop@ -->
+    $menu$
+    <!-- @/menusLoop@ -->
+</script>
+
+<!-- Facet Menu (for Search) -->
+<script type="text/html" id="pages/dv14_navigation_bar/facet_menu">
+    <menu type="dropdown" class="align-center">
+        <!-- @itemsLoop@ -->
+        $item$
+        <!-- @/itemsLoop@ -->
+    </menu>
+</script>
+
+<script type="text/html" id="pages/dv14_navigation_bar/genre_button">
+    <button type="link" class="@class@">
+          <text>@categories@</text>
+    </button>
+</script>
+
+<script type="text/html" id="pages/dv14_navigation_bar/preview_history_button">
+    <button type="image" class="align-right">
+        <img alt="@previewHistoryText@" src="resource://previewHistory"/>
+    </button>
+</script>
+<script type="text/html" id="components/dv14_navigation_bar_with_done_button">
+    <navigationBar>
+        $doneButton$
+    </navigationBar>
+</script><script type="text/html" id="components/dv14_navigation_bar_with_cancel_button">
+    <navigationBar class="@class@">
+        $cancelButton$
+    </navigationBar>
+</script><script type="text/html" id="components/dv14_notify_me_button">
+    <button class="@classes@" @attributes@>@actionText@</button>
+</script><script type="text/html" id="components/dv14_offer/text_on_left">
+    <offer class="@classes@" @attributes@>
+        $title$
+        $subtitle$
+        $buttons$
+        $additionalText$
+        $divider$
+    </offer>
+</script>
+
+<script type="text/html" id="components/dv14_offer/text_on_right">
+    <offer class="@classes@" @attributes@>
+        $buttons$
+        $title$
+        $subtitle$
+        $divider$
+    </offer>
+</script><script type="text/html" id="dv14_personalized_swoosh">
+    <section>
+        $swoosh$
+    </section>
+</script><script type="text/html" id="components/dv14_preview_overlay">
+    <document>
+        <previewTemplate preview-url="@previewUrl@" data-content-id="@contentId@">
+            <lockup type="overlay">
+                <previewControl preview-url="@previewUrl@" data-content-id="@contentId@"/>
+                <title>@title@</title>
+                <subtitle>@subtitle@</subtitle>
+                @buyButton@
+            </lockup>
+        </previewTemplate>
+    </document>
+</script><script type="text/html" id="components/dv14_purchases_playlist">
+    <section>
+        <lockup type="product" pin="true" class="product-lockup">
+            @artwork@
+            @title@
+            @subtitle@
+            @redownloadButton@
+            @badges@
+        </lockup>
+        $tracklist$
+        $episodes$
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_purchases_playlist/episode_list">
+    <section>
+        <!-- @episodeLockupLoop@ -->
+            <lockup type="list">
+                <!--$videoPreview$-->
+                @playIcon@
+                <header>
+                    <title maxLines="2">@title@</title>
+                </header>
+                <description class="description" maxLines="2" moreLabel="@moreLabel@">@description@</description>
+                @redownloadButton@
+            </lockup>
+        <!-- @/episodeLockupLoop@ -->
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_purchases_playlist/episode_preview_icon">
+    <img src="@src@" width="@width@" height="@height@"/>
+</script><script type="text/html" id="components/dv14_pills">
+    <segmentedControl class="@className@" maxItems="@maxItems@" moreLabel="@moreLabel@">
+        <!-- @pillRepetition@ -->
+            @pill@
+        <!-- @/pillRepetition@ -->
+        <!-- @showDivider@ -->
+            <divider class="divider"/>
+        <!-- @/showDivider@ -->
+    </segmentedControl>
+</script>
+<script type="text/html" id="components/dv14_quicklinks">
+    <header>
+        <title>
+            <text>@title@</text>
+        </title>
+    </header>
+    <grid class="grid">
+    <!-- @quickLinksLoop@ -->
+    <button class="button-color" data-url="@quickLinkUrl@">
+        <text>@quickLinkText@</text>
+    </button>
+    <!-- @/quickLinksLoop@ -->
+    </grid>
+
+    <divider class="divider"/>
+</script><script type="text/html" id="components/dv14_radio_promo">
+    <lockup type="list" class="radio-promo">
+        $artwork$
+
+        <!-- @titleBadgeBlock@ -->
+        <badge src="@badgeUrl@" />
+        <text class="editorial-spacer"><br/></text>
+        <!-- @/titleBadgeBlock@ -->
+
+        <!-- @titleBlock@ -->
+        <title maxLines="1">@title@</title>
+        <!-- @/titleBlock@ -->
+
+        <!-- @subtitleBlock@ -->
+        <subtitle maxLines="1">@subtitle@</subtitle>
+        <!-- @/subtitleBlock@ -->
+
+        <decorationImage class="arrow" src="resource://arrow"/>
+    </lockup>
+</script><script type="text/html" id="components/dv14_redownload_button">
+    <button class="@classes@" @attributes@/>
+</script>
+<script type="text/html" id="components/dv14_rotten_tomatoes_component">
+    <spacer/>
+    <row>
+        <column>
+            <lockup>
+                <text class="tomato-header-badge-percentage @classes@">
+                    <badge src="@imgSrc@"
+                           class="tomato-header-badge-icon"
+                           width="20" height="20"
+                    @attributes@/> @tomatometerPercentage@
+                </text>
+            </lockup>
+        </column>
+        <column>
+            @statistics@
+        </column>
+    </row>
+
+    @reviews@
+</script>
+
+<script type="text/html" id="components/dv14_rotten_tomatoes_component/statistics">
+    <lockup>
+        <text class="@classes@">@reviewsCounted@</text>
+        <text class="@classes@">@freshAndRotten@</text>
+        <text class="@classes@">@averageRating@</text>
+    </lockup>
+</script>
+
+<script type="text/html" id="components/dv14_rotten_tomatoes_reviews">
+    <grid class="grid">
+        <!-- header does not fill text unless there is content in grid -->
+        <header class="tomato-reviews-header">
+            <title>@topCriticsReviewsHeader@</title>
+        </header>
+        <!-- @reviewsLoop@ -->
+        @reviews@
+        <!-- @/reviewsLoop@ -->
+        @linkToRottenTomatoesSite@
+    </grid>
+</script>
+
+<script type="text/html" id="components/dv14_rotten_tomatoes_component/review">
+    <section>
+      <lockup class="tomato-review">
+        <list>
+            <badge src="@imgSrc@" class="@classes@" @attributes@/>
+            <text>@title@</text>
+        </list>
+        @descriptionText@
+        <text class="tomato-citation">@citation@</text>
+      </lockup>
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_rotten_tomatoes_component/rotten_tomatoes_link_item">
+    <lockup class="tomato-link-item">
+        <title>@title@</title>
+        <decorationImage class="arrow" src="resource://arrow"/>
+    </lockup>
+</script>
+<script type="text/html" id="components/dv14_sample_button">
+    <button class="@classes@" data-content-id="@contentId@" type="sample">@buttonText@</button>
+</script><script type="text/html" id="components/dv14_search_field">
+    <input type="search" class="@classes@" @attributes@>@searchTerm@</input>
+</script><script type="text/html" id="components/dv14_select">
+    <menu type="dropdown" class="@classes@" @attributes@>
+        <!-- @itemsLoop@ -->
+            @item@
+        <!-- @/itemsLoop@ -->
+    </menu>
+</script>
+<script type="text/html" id="components/dv14_share_button">
+    <button type="image" class="@classes@" @attributes@>
+        <img class="share-button-image" src="resource://share"/>
+    </button>
+</script>
+<script type="text/html" id="components/dv14_share_sheet">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <shareTemplate>
+            <activity type="*">
+                $artwork$
+                <text>@text@</text>
+                <url>@shortUrl@</url>
+            </activity>
+
+            <activity type="airdrop">
+                $artwork$
+                <text>@text@</text>
+                <url>@url@</url>
+            </activity>
+
+            @wishlistActivity@
+            @giftActivity@
+        </shareTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/dv14_share_sheet/gift">
+    <document>
+        <giftTemplate type="product" buyParams="@buyParams@" data-content-id="@adamId@">
+           $lockup$
+        </giftTemplate>
+    </document>
+</script>
+<script type="text/html" id="components/dv14_shelf">
+    <section @attributes@>
+        <!-- @headerBlock@ -->
+        <header>
+            <title class="shelf-title">@title@</title>
+            @link@
+        </header>
+        <!-- @/headerBlock@ -->
+        <shelf id="@adamId@" class="@classes@">
+            $lockups$
+        </shelf>
+        <!-- @showDivider@ -->
+        <divider class="divider"/>
+        <!-- @/showDivider@ -->
+
+        <!-- @addHiddenDivider@ -->
+        <divider class="divider-no-border"/>
+        <!-- @/addHiddenDivider@ -->
+
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_star_histogram">
+    @histogram@
+    <!-- @showDivider@ -->
+    <divider class="divider"/>
+    <!-- @/showDivider@ -->
+</script>
+
+<script type="text/html" id="components/dv14_star_histogram/histogram">
+    <starHistogram>
+            <starRating value="@avgRating@" type="small" disabled="true">@ratingsText@</starRating>
+        <!-- @starBarBlock@ -->
+            <starBar numStars="@numStars@" value="@value@" count="@count@"/>
+        <!-- @/starBarBlock@ -->
+    </starHistogram>
+</script>
+
+<script type="text/html" id="components/dv14_star_histogram/no_ratings">
+    <section>
+        <lockup>
+            <text maxLines="0">@ratingsText@</text>
+        </lockup>
+    </section>
+</script>
+<script type="text/html" id="components/dv14_styles">
+    <style>
+        <!-- color styles -->
+        .clear {
+            background-color: @transparentColor@;
+        }
+        .primary-color {
+            color: @primaryTextColor@;
+        }
+        .divider-no-border {
+            border-color: rgba(0,0,0,0);
+        }
+        .one-column {
+            column-count: 1;
+        }
+
+        .carousel {
+            padding: 0 5 15 0;
+        }
+
+        .secondary-color {
+            color: @primaryTextColor60@;
+        }
+        .link-color {
+            color: @linkColor@;
+        }
+        .action-color {
+            color: @actionColor@;
+        }
+        .button-color {
+            color: @actionColor@;
+        }
+        .bg-color {
+            background-color: @backgroundColor@;
+        }
+
+        .key-color {
+            color: @keyColor@;
+        }
+
+        .filter-bar-color {
+            color: @filterBarColor@;
+        }
+
+        .selected {
+            color: @keyColor@;
+        }
+        <!-- align/position styles -->
+        .align-left {
+            itml-align: left;
+        }
+        .align-right {
+            itml-align: right;
+        }
+
+        .align-center {
+            itml-align: center;
+        }
+
+        .align-top {
+            itml-align: top;
+        }
+        .align-bottom {
+            itml-align: bottom;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-top {
+            text-align: top;
+        }
+        .text-bottom {
+            text-align: bottom;
+        }
+
+        .position-top {
+            itml-position: top;
+        }
+        .position-right {
+            itml-position: right;
+        }
+        .position-center {
+            itml-position: center;
+        }
+        .top-right {
+            itml-position: top-right;
+        }
+        .top-left {
+            itml-position: top-left;
+        }
+        .bottom-right {
+            itml-position: bottom-right;
+        }
+        .bottom-left {
+            itml-position: bottom-left;
+        }
+
+        .spacer {
+            font-size: 2pt;
+        }
+
+        .hidden-bar {
+            visibility: hidden;
+        }
+
+        .left-split {
+            itml-item-width: 320pt;
+        }
+
+        .editorial-padding-with-iap {
+            padding: 4 0 0 0;
+            itml-padding: 4 0 0 0;
+        }
+
+        <!-- artwork styles -->
+        .brick-art {
+            itml-img-treatment: brick;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .course-art {
+            itml-img-treatment: none;
+        }
+
+        .light-art {
+            itml-img-treatment: product;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .dark-art {
+            itml-img-treatment: product;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .app-art {
+            itml-img-treatment: app;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .watch-app-art {
+            itml-img-treatment: watch-app;
+            border-color: rgba(0,0,0,0.2);
+            border-width: 1px;
+        }
+
+        .watch-screenshot {
+            itml-img-treatment: watch-product;
+            border-color: rgb(0,0,0);
+            border-radius: 12px;
+            border-width: 12px;
+        }
+
+        .voyager-app-art {
+            itml-img-treatment: voyager-app;
+            border-color: @artworkStrokeColor@;
+            border-width: 1px;
+        }
+
+        .tv-app-art {
+            itml-img-treatment: tv-app;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .radio-art {
+            itml-img-treatment: radio;
+            border-color: @artworkStrokeColor@;
+        }
+
+        .app-bundle-artwork-title {
+            itml-align: center;
+        }
+        .app-bundle-artwork-list-2 {
+            column-count: 2;
+            itml-align: center;
+        }
+        .app-bundle-artwork-list-3 {
+            column-count: 3;
+            itml-align: center;
+        }
+        .app-bundle-artwork-list-4 {
+            column-count: 4;
+            itml-align: center;
+        }
+        .two-column {
+            column-count: 2;
+        }
+        .three-column {
+            column-count: 3
+        }
+        .four-column {
+            column-count: 4
+        }
+        .editorial-card {
+            <!-- "editorial" was taken by custom block grids -->
+            itml-card-type: programmed;
+        }
+        .ad {
+            padding: 20 0 10 0;
+            background-color: rgb(237, 246, 255);
+        }
+        .movie-page-arrow {
+            color: @primaryTextColor80@;
+            itml-img-treatment: tint;
+        }
+        .movie-page-link-to-tomato {
+            font-size: 17pt;
+        }
+        .software {
+            itml-img-treatmet: app;
+        }
+
+        .software-iap-label-iphone {
+            font-size: 8pt;
+            color: rgba(0,0,0,0.76);
+        }
+        .software-iap-label-ipad {
+            font-size: 8pt;
+            color: rgba(0,0,0,0.76);
+            itml-text-max-lines: 2;
+        }
+        .software-page-link {
+            font-size: 18pt;
+        }
+        .software-page-arrow {
+            color: rgba(200,200,200,1);
+            itml-img-treatment: tint;
+        }
+        .software-screenshot-devices {
+            font-size: 12pt;
+            color: rgba(170,170,170,1);
+        }
+        .expand-button {
+            font-size: 12pt;
+            color: rgb(38,121,251);
+        }
+        .two-line {
+            itml-text-max-lines: 2;
+        }
+        .three-line {
+            itml-text-max-lines: 3;
+        }
+        .shelf-with-rows {
+            itml-lockup-type: list;
+        }
+
+        .rental-expiration {
+            font-size: 14pt;
+            color: rgba(255,0,0,1);
+            itml-text-max-lines: 2;
+        }
+
+        .share-button-product {
+            itml-position: top-right;
+            color: @buybuttonColor@;
+            itml-img-treatment: tint;
+        }
+
+        .share-button-image {
+            color: @buyButtonColor@;
+            itml-img-treatment: tint;
+        }
+
+        .screenshot-landscape {
+            transform: rotate(-90);
+            itml-img-treatment: product;
+        }
+
+        .search-facet-menu {
+            itml-align: center;
+        }
+
+        .related-searches-back-button {
+            color: @primaryTextColor@
+        }
+
+        .related-searches-messages {
+            itml-item-width: 510pt;
+            itml-align: center;
+        }
+
+        .search-button-image {
+            color: @buyButtonColor@;
+            itml-img-treatment: tint;
+        }
+
+        .search-field-on-ipad {
+            itml-align: right;
+            color: @searchFieldColor@;
+        }
+
+        .search-field-ipad-messages {
+            itml-item-width: 510pt;
+            itml-align: center;
+        }
+
+        .search-no-results-img {
+            color: rgb(200,200,200);
+            itml-img-position:center
+        }
+
+        .error-img {
+            color: rgb(200,200,200);
+            itml-img-position: center;
+        }
+
+        .error-retry-button {
+            border-color: rgba(0,0,0,0.8);
+            border-width: 0.5pt;
+            border-radius: 2.5pt;
+            color: rgba(0,0,0,0.4);
+            font-size: 15pt;
+            padding: 4.5pt 32pt 4.5pt 32pt;
+        }
+
+        .search-no-results-text {
+            background-color: @backgroundColor@;
+            color: rgb(77,77,77);
+            font-size:32;
+            itml-align: center;
+        }
+
+        .trending-searches-title {
+            itml-align: center;
+            font-size: 22pt;
+            color: rgb(0,0,0);
+        }
+
+        .tomato-reviews-header {
+            color: @backgroundColor@;
+            background-color: @pillColor@;
+        }
+
+        .tomato-citation {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .tomato-header-badge-icon {
+            itml-align: top;
+        }
+
+        .tomato-header-title {
+            color: @primaryTextColor@;
+        }
+
+        .tomato-header-expand-link-ipad {
+            color: @primaryTextColor50@;
+            text-align: right;
+        }
+
+        .tomato-header-expand-disclosure-ipad {
+            color: @primaryTextColor80@;
+            itml-align: center;
+        }
+
+        .tomato-header-percentage-ipad {
+            color: @primaryTextColor40@;
+            font-size: 36pt;
+            text-align: top;
+        }
+
+        .tomato-header-badge-percentage {
+            itml-align: left;
+            font-size: 18pt;
+            color: @primaryTextColor@;
+        }
+
+        .tomato-review {
+            font-size: 14pt;
+        }
+
+        .tomato-review-desc {
+            color: rgb(175, 175, 175);
+        }
+
+        .tomato-statistics-right-align {
+            color: @primaryTextColor40@;
+            text-align: right;
+        }
+
+        .tomato-statistics-left-align {
+            color: @primaryTextColor40@;
+            text-align: left;
+        }
+
+        .tomato-reviews-title {
+            color: @primaryTextColor@;
+        }
+
+        .tomato-link-item {
+            font-size: 17pt;
+        }
+
+        .facebook {
+            border-color: @borderColor@;
+        }
+
+        .no-borders-grid {
+            border-color: rgba(0,0,0,0);
+            itml-divider-type: none;
+        }
+
+        .no-highlight {
+            background-color: rgba(0,0,0,0);
+        }
+
+        .apple-pack-grid-ipad {
+            border-color: rgba(0,0,0,0);
+            itml-divider-type: none;
+            itml-item-width: 420pt;
+        }
+
+        .radio-pack-grid {
+
+        }
+
+        .radio-pack-description {
+            text-align: center;
+            font-size: 15pt;
+        }
+
+        .radio-pack-lockup {
+            font-size: 15pt;
+            itml-padding: 5pt;
+        }
+
+        .grid-full {
+            itml-divider-type: grid-full;
+        }
+
+        .grid-top {
+            itml-divider-type: grid-top;
+        }
+
+        .no-padding {
+            padding: 0;
+            itml-padding: 0pt;
+        }
+
+        .badge-explicit {
+            color: rgb(207, 38, 42);
+        }
+
+        .badge-for-app-rating {
+            itml-badge-treatment: rect;
+        }
+
+        .badge-for-video-rating {
+            color: @primaryTextColor@;
+            itml-badge-treatment: rect;
+        }
+
+        .description {
+            color: @primaryTextColor60@;
+        }
+
+        .episode-date {
+            color: @primaryTextColor60@;
+        }
+
+        .itunesu-learn-more {
+            color: @linkColor@;
+            itml-align: left;
+        }
+
+        .carousel-item {
+            border-width: 0px 0px 1px 0px;
+            border-color: @borderColor@;
+        }
+
+        .carousel-item-ipad {
+            border-width: 0px 1px 1px 1px;
+            border-color: @borderColor@;
+        }
+
+       .globallists-no-history {
+            itml-align: center;
+        }
+
+        .globallists-no-history-text {
+            text-align: center;
+            itml-text-max-lines: 5;
+        }
+
+        .banner-room-page-grid-iphone {
+             itml-lockup-type: shelf;
+             column-count: 2;
+             itml-align: center;
+             border-color: rgba(0,0,0,0);
+             itml-divider-style: none;
+        }
+
+        .banner-room-page-grid-ipad {
+            itml-lockup-type: shelf;
+            column-count: 3;
+            border-color: rgba(0,0,0,0);
+            itml-divider-style: none;
+            itml-align: center;
+        }
+
+        .banner-room-page-lockup {
+             itml-img-treatment: brick;
+         }
+
+        .pills {
+            color: @pillColor@;
+            itml-img-treatment: tint;
+        }
+
+        .product-page-pills {
+            color: @pillColor@;
+            itml-img-treatment: tint;
+            itml-segmented-control-width: full;
+        }
+
+        .tabs {
+            color: @keyColor@;
+            itml-img-treatment: tint;
+        }
+        .top-author-pills {
+            padding: 7 0 0;
+        }
+
+        .copyright {
+            color: @copyrightTextColor@;
+        }
+
+        .trailer-swoosh-ipad {
+            itml-item-width: 210pt;
+        }
+
+        .trailer-swoosh-iphone {
+            itml-item-width: 159pt;
+        }
+
+        .ipad-lockup-row {
+            itml-item-width: 385pt;
+        }
+
+        .arrow {
+            color: @arrowColor@;
+            itml-img-treatment: tint;
+        }
+
+        .checkbox {
+            color: @keyColor@;
+            itml-img-treatment: tint;
+        }
+
+        .account-buttons {
+            color: @accountButtons@;
+            border-color: @accountButtonBorders@;
+        }
+
+        .mastered-for-itunes {
+            text-align: center;
+            font-size: 17pt;
+            color: @primaryTextColor@;
+        }
+
+        .category-sheet {
+            background-color: rgba(0,0,0,0);
+            font-size: 20pt;
+        }
+
+        .collection-list-header {
+            background-color: rgba(247,247,247,1);
+        }
+        .collection-list-lockup {
+            font-size: 16pt;
+        }
+
+        .divider-full {
+            itml-divider-type: full;
+        }
+
+        .divider-none {
+            itml-divider-type: none;
+        }
+
+        .close-button {
+            itml-position: top-right;
+            itml-column-type: buttons;
+            padding-bottom: 3;
+        }
+
+        .buy-button {
+            color: @buyButtonColor@;
+        }
+
+        .filled-buy-button {
+            color: @buyButtonColor@;
+            itml-img-treatment: tint;
+        }
+
+        .apple-music-buy-button {
+            padding-bottom: 4;
+        }
+
+        .apple-music-buy-button-image {
+            itml-position: bottom-right;
+            padding-bottom: -10;
+        }
+
+        .buy-disabled {
+            color: @buyButtonDisabledColor@;
+        }
+
+        .buy-buttonless {
+            color: @buyButtonButtonlessColor@;
+            font-size: 10pt;
+            itml-text-max-lines: 2;
+        }
+
+        .buy-textonly {
+            color: @buyButtonTextOnlyColor@;
+            font-size: 13pt;
+        }
+
+        .buy-download {
+            color: @buyButtonColor@;
+            itml-img-treatment: tint;
+        }
+
+        .buy-cmc {
+            color: @buyButtonCMCColor@;
+            itml-img-treatment: tint;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+
+        .buy-preorder {
+            color: @buyPreorderColor@;
+            font-size: 14pt;
+        }
+
+        .filled-buy-preorder {
+            color: @buyPreorderColor@;
+            itml-img-treatment: tint;
+            font-size: 14pt;
+        }
+
+        .preorder {
+            color: @buyPreorderColor@;
+        }
+
+        .cmc-subtitle {
+            color: @cmcSubtitleColor@;
+            font-size: 10pt;
+            font-weight: normal;
+        }
+
+        .cmc-price {
+            color: @buyButtonCMCColor@;
+        }
+
+        .badge-row {
+            padding: 0 0 7 0;
+        }
+
+        .developer-response-title {
+            itml-text-style: subhead2-tall;
+        }
+
+        .write-review {
+            color: @actionColor@;
+            itml-position: center;
+            text-align: center;
+        }
+
+        .app-support {
+            color: @actionColor@;
+        }
+
+        .editorial-badge {
+            itml-badge-treatment: round-rect;
+            color: @backgroundColor@;
+            background-color: @pillColor@;
+        }
+
+        .purchases-navigation-item {
+            font-size: 18pt;
+            itml-position: left;
+            text-align: left;
+        }
+
+        .grid-heading {
+            font-size: 18pt;
+            font-weight: bold;
+            background-color: rgb(77,77,77);
+        }
+
+        .ipad-lockup-row {
+            itml-item-width: 385pt;
+            itml-padding: 5pt;
+        }
+
+        .category-lockup-row {
+            font-size: 17pt;
+        }
+
+        .product-lockup {
+            color: @primaryTextColor60@;
+        }
+
+        .product-split {
+            itml-item-width: 0.60;
+            border-width: 0px 1px 0px 0px;
+            border-color: @borderColor@;
+        }
+
+        .related-split {
+            itml-item-width: 0.40;
+        }
+
+        .apple-pack-header {
+            font-size: 13pt;
+            text-align: center;
+            color: rgba(0,0,0,0.6);
+        }
+
+        .apple-pack-footer {
+            font-size: 12pt;
+            text-align: center;
+            color: rgba(0,0,0,0.6);
+        }
+
+        .episode-title {
+            font-size: 14pt;
+        }
+
+        .product-unavailable {
+            color: @primaryTextColor40@;
+            itml-img-treatment: tint;
+        }
+
+        .divider {
+            color: @borderColor@;
+            border-color: @borderColor@;
+        }
+
+
+        .product-title  {
+            color: @primaryTextColor@;
+        }
+
+        .subtitle  {
+            color: @primaryTextColor80@;
+        }
+
+        .podcasts-subtitle {
+            font-size: 14pt;
+        }
+
+        .brick-counter {
+            color: rgba(255,255,255, 1);
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        .extras-title {
+            font-size: 10pt;
+            color: @primaryTextColor@;
+        }
+
+        .additional-app-available-lockup {
+            background-color: rgba(0,0,0,0);
+        }
+
+        .additional-app-available-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: @primaryTextColor60@;
+        }
+
+        .extras-badge-lockup {
+            background-color: rgba(0,0,0,0);
+        }
+
+        .extras-screenshot-lockup {
+            itml-position: top;
+        }
+
+        .extras-text {
+            font-size: 10pt;
+            color: @primaryTextColor40@;
+        }
+
+        .extras-requirements {
+            font-size: 12pt;
+            color: @primaryTextColor40@;
+            text-align: left;
+            itml-align: left;
+        }
+
+        .extras-description {
+            font-size: 12pt;
+            color: @primaryTextColor60@;
+        }
+
+        .editorial-spacer {
+            font-size: 2pt;
+        }
+
+        .editorial-spacer-large {
+            font-size: 4pt;
+        }
+
+        .listen-now-link {
+            color: @keyColor@;
+            font-size: 14pt;
+            itml-position: center;
+            itml-align: center;
+        }
+
+        .radio-promo {
+            background-color: rgab(0,0,0,0);
+        }
+
+        .watch-enabled {
+            font-size: 10pt;
+        }
+
+        .watch-bg {
+            background-color: rgba(242,242,242,1);
+            itml-align: center;
+            text-align: center;
+            padding: 0;
+        }
+
+        .watch-bg-left {
+            background-color: rgba(242,242,242,1);
+            itml-align: left;
+            text-align: left;
+            padding: 0;
+        }
+
+        .watch-spacer {
+            font-size: 2pt;
+        }
+
+        .watch-image {
+            itml-img-position: center;
+        }
+
+        .watch-coming-soon {
+            font-size: 14pt;
+            color: rgba(94,94,94,1);
+        }
+
+        .watch-coming-soon-big {
+            font-size: 16pt;
+            color: rgba(94,94,94,1);
+        }
+
+        .watch-preorder-link {
+            font-size: 14pt;
+            font-weight: bold;
+            color: rgba(255,149,0,1);
+        }
+
+        .watch-learnmore-link {
+            font-size: 14pt;
+            font-weight: bold;
+            color: rgba(0,126,255,1);
+        }
+
+        .watch-video-learn-more {
+            font-size: 16pt;
+            color: rgba(0,126,255,1);
+        }
+
+        .watch-bottom-text {
+            font-size: 14pt;
+            color: rgba(0,0,0,1);
+        },
+
+        .watch-bottom-text-large {
+            font-size: 16pt;
+            color: rgba(0,0,0,1);
+        },
+
+        .watch-video-grid {
+            itml-item-width: 320pt;
+            itml-divider-style: none;
+            border-color: rgba(0,0,0,0);
+            text-align: center;
+            itml-align: center;
+            itml-position: center;
+            padding: 4 0 6;
+            column-count: 1;
+        },
+
+        .watch-video-lockup {
+            background-color: rgba(0,0,0,0);
+            border-color: rgba(0,0,0,0);
+            text-align: center;
+            itml-align: center;
+            itml-position: center;
+        },
+
+        .watch-video-title {
+            font-size: 14pt;
+            color: rgba(0,0,0,1);
+            text-align: center;
+            itml-align: center;
+        },
+
+        .offers-iap {
+            font-size: 11pt;
+            color: @primaryTextColor76@;
+        },
+
+        .email-support-link {
+            color: @linkColor@;
+            font-size: 12pt;
+            padding: -14 0 20;
+        }
+
+        .purchases-avatar {
+          color: rgb(132, 132, 132);
+          itml-img-treatment: tint;
+          itml-img-placeholder-background-color: rgb(255,255,255);
+        }
+
+        .upgrade-device-subtitle {
+            itml-text-max-lines: 2;
+            font-size: 22pt;
+            color: rgb(51,51,51);
+            font-weight: light;
+            text-align: center;
+        }
+
+        .upgrade-device-spacer {
+            font-size: 17pt;
+        }
+
+        .upgrade-device-link {
+            font-size: 18pt;
+            color: rgba(0,126,255,1);
+        }
+
+        .template {
+            background-color: @backgroundColor@;
+            color: @primaryTextColor@;
+        }
+
+        .uber {
+            itml-img-treatment: uber;
+            background-color: @backgroundColor@;
+        }
+
+        .uber-title-color {
+            color: @titleTextColor@;
+        }
+
+        .uber-text-color  {
+            color: @primaryTextColor@;
+        }
+
+        .uber-banner {
+            itml-img-treatment: uber-banner;
+            background-color: @bannerBackgroundColor@;
+        }
+
+        .track-list {
+            color: @primaryTextColor@;
+        }
+
+        .track {
+            border-color: @borderColor@;
+        }
+
+        .track-disabled {
+            color: @primaryTextColor40@;
+        }
+
+        .preview-control {
+            color: @buyButtonColor@;
+        }
+        .copyright {
+            background-color: @backgroundColor@;
+            color: @primaryTextColor40@;
+        }
+        .control {
+            color: @primaryTextColor@;
+        }
+
+        .shelf-title {
+            color: @primaryTextColor@;
+        }
+
+        .lockup-title {
+            color: @primaryTextColor@;
+        }
+        .lockup-subtitle {
+            color: @primaryTextColor60@;
+        }
+        .price-string {
+            color: @primaryTextColor60@;
+        }
+        .star-rating {
+            color: @primaryTextColor@;
+        }
+        .no-star-rating {
+            font-size: 7pt;
+        }
+        .badge {
+            color: @primaryTextColor@;
+            itml-img-treatment: tint;
+            itml-img-mask-color: @primaryTextColor@;
+        }
+
+        .badge-text {
+            color: @primaryTextColor@;
+            font-size: 11pt;
+        }
+
+        .tracklist-header {
+            border-color: @borderColor@;
+        }
+
+        .grid {
+            border-color: @borderColor@;
+        }
+
+        .filter-bar {
+            border-color: @borderColor@;
+        }
+
+        .info-title {
+            color: @primaryTextColor80@;
+        }
+
+        .info-value {
+            color: @primaryTextColor40@;
+        }
+
+        .rent-button-text {
+            color: @titleTextColor@;
+            font-size: 14pt;
+        }
+
+        .editorial-badge {
+            background-color: @titleTextColor@;
+        }
+
+        .star-bar {
+            color: rgb(0, 255,0);
+            background-color: rgb(255,0,0);
+        }
+
+        .software-page-link {
+            color: @pillColor@
+        }
+
+        <!-- @blocksBlock@ -->
+        .title-size-s {
+            font-size: 13pt;
+        }
+
+        .title-size-m {
+            font-size: 16pt;
+        }
+
+        .title-size-l {
+            font-size: 22pt;
+        }
+
+        .title-size-xl {
+            font-size: 28pt;
+        }
+
+        .title-weight-normal {
+            font-weight: normal;
+        }
+
+        .title-weight-bold {
+            font-weight: bold;
+        }
+
+        .body-size-s {
+            font-size: 10pt;
+        }
+
+        .body-size-m {
+            font-size: 13pt;
+        }
+
+        .body-size-l {
+            font-size: 18pt;
+        }
+
+        .body-size-xl {
+            font-size: 22pt;
+            font-weight: normal;
+        }
+
+        .body-weight-normal {
+            font-weight: normal;
+        }
+
+        .body-weight-bold {
+            font-weight: bold;
+        }
+
+        .grid-1-col {
+            column-count: 0;
+        }
+
+        .grid-2-col {
+            column-count: 2;
+        }
+
+        .grid-3-col {
+            column-count: 3;
+        }
+
+        .grid-4-col {
+            column-count: 4;
+        }
+
+        .editorial-lockup-card {
+            itml-card-type: editorial;
+        }
+
+        .grid-lockup-orientation-v0 {
+            itml-lockup-type: shelf;
+        }
+
+        .grid-lockup-orientation-v1 {
+            itml-lockup-type: shelf;
+        }
+
+        .grid-lockup-orientation-v2 {
+            itml-lockup-type: shelf;
+        }
+
+        .grid-lockup-orientation-v3 {
+            itml-lockup-type: shelf;
+        }
+
+        .grid-lockup-orientation-v4 {
+            itml-lockup-type: shelf;
+        }
+
+        .grid-lockup-orientation-v5-ipad {
+            itml-lockup-type: shelf;
+        }
+
+        .editorial-lockup-image {
+            itml-position: top-left;
+        }
+
+        .banner-grid-iphone {
+             itml-lockup-type: shelf;
+             column-count: 2;
+             border-color: rgba(0,0,0,0);
+             itml-divider-style: none;
+        }
+
+        .banner-grid-ipad {
+            itml-lockup-type: shelf;
+            column-count: 3;
+            border-color: rgba(0,0,0,0);
+            itml-divider-style: none;
+        }
+
+        .grid-align-left {
+            itml-align: left;
+        }
+
+        .grid-align-center {
+            itml-align: center;
+        }
+
+        .grid-align-right {
+            itml-align: right;
+        }
+
+        .button-list-link {
+            border-width: 1pt;
+            border-color: @primaryTextColor@;
+            border-radius: circle-caps;
+            color: @primaryTextColor@;
+            padding: 10 25 10 25;
+            margin: 15 0 40 0;
+        }
+
+        .button-list-link.caption2 {
+            itml-text-style: caption2;
+        }
+
+        .button-list-link.bottom {
+            itml-position: bottom;
+        }
+
+        <!-- @/blocksBlock@ -->
+
+    </style>
+</script>
+<script type="text/html" id="components/dv14_tabbed_pane">
+    <section class="@classes@">
+        $pills$
+        <section>
+            $tabbedPaneContent$
+        </section>
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_tabbed_pane/content">
+    <section class="content-section"></section>
+</script>
+
+<script type="text/html" id="components/dv14_thank_you_placard">
+  <lockup href="@url@">
+    $artwork$
+    <header>
+      <title>$title$</title>
+      $redeemLink$
+    </header>
+    <!-- @explanationLoop@ -->
+    <text>$explanation$</text>
+    <!-- @/explanationLoop@ -->
+    <list type="inline">
+      <!-- @linkLoop@ -->
+      <button type="link" data-url="@link.url@" data-page-target="@link.target@">@link.label@</button>
+      <!-- @/linkLoop@ -->
+    </list>
+  </lockup>
+</script>
+
+<script type="text/html" id="components/dv14_thank_you_placard/redeem_link">
+    <button type="link" data-url="@redeemLink.url@">@redeemLink.label@</button>
+</script>
+<script type="text/html" id="components/dv14_track">
+    <track class="@classes@" @attributes@>
+        <!-- @columnBlock@ -->
+            @columnContent@
+        <!-- @/columnBlock@ -->
+    </track>
+</script><script type="text/html" id="components/dv14_track_list">
+    <trackList class="track-list">
+        $columnHeader$
+    </trackList>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_header">
+    <header class="tracklist-header">
+        <!-- @columnTitleLoop@ -->
+            <text>@columnTitle@</text>
+        <!-- @/columnTitleLoop@ -->
+    </header>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/section">
+    <section>
+        @tracks@
+    </section>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/work_header">
+    <header>
+        @title@
+        @buyButton@
+    </header>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_ordinal">
+    <!-- @previewBlock@ -->
+    <previewControl preview-url="@previewUrl@" class="preview-control" data-content-id="@contentId@">
+    <!-- @/previewBlock@ -->
+        <ordinal class="@classes@">@ordinal@</ordinal>
+    <!-- @previewBlock@ -->
+    </previewControl>
+    <!-- @/previewBlock@ -->
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_title">
+    <title class="@titleClass@" maxLines="@maxLines@">
+        <text>@title@</text>
+    </title>
+    <!-- @subTitleBlock@ -->
+    <subtitle maxLines="@subtitleMaxLines@">@subTitle@</subtitle>
+    <!-- @/subTitleBlock@ -->
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_duration">
+    <text class="@durationClass@"><duration>@duration@</duration></text>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_popularity">
+    <popularity value="@popularity@"/>
+</script>
+
+<script type="text/html" id="components/dv14_track_list/column_badge">
+    @badge@
+</script>
+<script type="text/html" id="components/upgrade_device">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate>
+            $navigationBar$
+            <row>
+                <column>
+                    <lockup class="align-center" disabled="true">
+                        <text class="upgrade-device-spacer"><br/></text>
+                        <img src="@titleSrc@" width="165" height="31" />
+                        <title class="upgrade-device-subtitle"><text>@subtitleText@</text></title>
+                    </lockup>
+                </column>
+            </row>
+            <img disabled="true" src="@heroSrc@" width="320" height="205" />
+            @learnMoreButton@
+            @upgradeButton@
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="components/upgrade_device/navigation_bar">
+    <navigationBar>
+        <title>@title@</title>
+        $cancelButton$
+    </navigationBar>
+</script>
+<script type="text/html" id="components/dv14_user_reviews_container">
+    <reviewList highlight="@highlight@">
+    </reviewList>
+</script>
+
+<script type="text/html" id="components/dv14_user_reviews_container/review_legacy">
+    <review>
+        <title>
+            <ordinal>@ordinal@</ordinal>
+            <text>@title@</text>
+        </title>
+        <starRating value="@value@" type="small" disabled="true">
+            <text>@byLine@</text>
+        </starRating>
+        $reviewText$
+    </review>
+</script>
+
+<script type="text/html" id="components/dv14_user_reviews_container/review">
+    <review>
+        <row>
+            <text>@title@</text>
+            <subtitle>@date@</subtitle>
+        </row>
+        <starRating value="@value@" type="small" disabled="true">
+            <text>@byLine@</text>
+        </starRating>
+        $reviewText$
+
+        <!-- @developerResponseBlock@ -->
+        <response>
+            <row>
+                <text class="developer-response-title">@developerResponseTitle@</text>
+                <subtitle>@developerResponseDate@</subtitle>
+            </row>
+            <!-- @developerResponseEditedBlock@ -->
+            <subtitle>@developerResponseEdited@</subtitle>
+            <!-- @/developerResponseEditedBlock@ -->
+            $developerResponseText$
+        </response>
+        <!-- @/developerResponseBlock@ -->
+
+        <!-- @contextActionsBlock@ -->
+        <dialogTemplate>
+            <!-- @contextActionsLoop@ -->
+            $contextAction$
+            <!-- @/contextActionsLoop@ -->
+        </dialogTemplate>
+        <!-- @/contextActionsBlock@ -->
+    </review>
+</script>
+<script type="text/html" id="pages/dv14_product_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <productTemplate class="template">
+            <background class="background"></background>
+            $navigationBar$
+            $banner$
+            $evodBanner$
+            $backgroundImage$
+            $content$
+            $loadingSpinner$
+        </productTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_product_page_content">
+    $productLockup$
+    $tabbedPane$
+</script>
+<script type="text/html" id="pages/dv14_product_split_page_content">
+        <split class="product-split">
+            $productLockup$
+            <divider class="divider"/>
+            $tabbedContent$
+            $loadingSpinner$
+        </split>
+        <divider class="divider"/>
+        <split class="related-split">
+            $rightContent$
+        </split>
+</script>
+
+<script type="text/html" id="pages/dv14_product_page/hd_sd_toggle">
+    <button class="button-color">
+        <text maxLines="0">@hdSdText@</text>
+    </button>
+</script>
+
+
+<script type="text/html" id="pages/dv14_product_page/ratings_and_reviews_tab">
+    $facebook$
+    $rottenTomatoes$
+    <header>
+        <title>@ratingsAndReviewsTitle@</title>
+    </header>
+    $tabbedPane$
+</script>
+
+<script type="text/html" id="pages/dv14_product_page/split/ratings_and_reviews_right">
+    $facebook$
+    $rottenTomatoes$
+    <header>
+        <title>@ratingsAndReviewsTitle@</title>
+    </header>
+    <row>
+        <column>
+            $starHistogram$
+        </column>
+    </row>
+</script>
+<script type="text/html" id="pages/dv14_product_page/split/ratings_and_reviews_bottom">
+    <row>
+        <!-- @WriteAReviewButtonBlock@ -->
+        <column>
+            $writeAReviewButton$
+        </column>
+        <!-- @/WriteAReviewButtonBlock@ -->
+        <!-- @SupportButtonBlock@ -->
+        <column>
+            $supportButton$
+        </column>
+        <!-- @/SupportButtonBlock@ -->
+    </row>
+
+    <divider class="divider"/>
+    $pills$
+    $userReviews$
+</script>
+
+<script type="text/html" id="pages/dv14_product_page/ratings_and_reviews_pane_content">
+    <row>
+        <column>
+            $starHistogram$
+        </column>
+        <!-- @iPadTapToRate@ -->
+        <column>
+            <list>
+                @tapToRateText@
+                @tapToRate@
+            </list>
+        </column>
+        <!-- @/iPadTapToRate@ -->
+    </row>
+
+    <divider class="divider"/>
+    <row>
+        <!-- @WriteAReviewButtonBlock@ -->
+        <column>
+            $writeAReviewButton$
+        </column>
+        <!-- @/WriteAReviewButtonBlock@ -->
+        <!-- @SupportButtonBlock@ -->
+        <column>
+            $supportButton$
+        </column>
+        <!-- @/SupportButtonBlock@ -->
+        <!-- @iPadSort@ -->
+        <column>
+            <list>
+                <text>@sortByText@</text>
+                @sortSelect@
+            </list>
+        </column>
+        <!-- @/iPadSort@ -->
+    </row>
+
+    <divider class="divider"/>
+    $userReviews$
+</script>
+
+<script type="text/html" id="pages/dv14_product_page/rotten_tomatoes_iphone">
+    <row class="movie-page-link-to-tomato">
+        <column span="2">
+            <lockup itsId="rtLink">
+                <text accessibilityText="@accessibilityText@">@title@</text>
+            </lockup>
+        </column>
+        <column>
+            <lockup itsId="rtLink">
+                <text class="text-right secondary-color">@percentage@ <badge src="@imgSrc@" @attributes@/></text>
+                <decorationImage class="arrow" src="resource://arrow"/>
+            </lockup>
+        </column>
+    </row>
+    <divider class="divider"/>
+</script>
+
+<script type="text/html" id="pages/dv14_product_page/rotten_tomatoes_ipad">
+    <header class="tomato-header-title" accessibilityText="@accessibilityText@"><title>@title@</title></header>
+    <row>
+        <column>
+            <lockup>
+                <list>
+                    <text class="tomato-header-percentage-ipad">@percentage@</text>
+                    <badge width="32" height="32" src="@imgSrc@" class="tomato-header-badge-icon" @attributes@/>
+                </list>
+            </lockup>
+        </column>
+        <column>
+            @statistics@
+        </column>
+        <column span="2">
+            <lockup itsId="expandRottenTomatoesReviewsButton">
+                <text class="tomato-header-expand-link-ipad">@showCriticsReviews@ <badge src="resource://disclosureDown"
+                                                                                         class="tomato-header-expand-disclosure-ipad"/>
+                </text>
+            </lockup>
+        </column>
+    </row>
+    <expand open="false" id="rottenTomatoesExpand">
+        @reviews@
+    </expand>
+    <divider class="divider"/>
+</script>
+<script type="text/html" id="pages/dv14_album_page/songs_tab">
+    $preorderDisclaimer$
+    $notes$
+    $description$
+    <!-- @masteredForITunesBlock@ -->
+    <list>$masteredForITunesBadge$</list>
+    <divider class="divider"/>
+    <!-- @/masteredForITunesBlock@ -->
+    $trackList$
+    $bonusContent$
+    <text class="copyright" maxLines="0">@copyright@</text>
+    <!-- @hasVariant@ -->
+    <divider/>
+    $variantButton$
+    <!-- @/hasVariant@ -->
+</script>
+
+<script type="text/html" id="pages/dv14_album_page/related_tab">
+    $topAlbumsByArtist$
+    $topSongsByArtist$
+    $listenersAlsoBoughtSongs$
+    $listenersAlsoBoughtAlbums$
+    $moreInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_album_page/bonus_content">
+    <section>
+        <header>
+            <title>@title@</title>
+        </header>
+         <description maxLines="0">@aboutBonusContent@</description>
+        <list>
+            <img src="@glyph@" class="badge" width="@width@" height="@height@"/>
+            <text>@bonusText@</text>
+        </list>
+        <description maxLines="3">@bonusContentDescription@</description>
+        $gallery$
+        <description class="description" maxLines="0">@aboutBonusContent@</description>
+    </section>
+</script><script type="text/html" id="pages/dv14_app_explore_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <exploreTemplate>
+            $navigation$
+            $content$
+        </exploreTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/split">
+    <split id="leftSplit">
+        $browse$
+    </split>
+
+    <split id="rightSplit" class="template">
+        $nearMeHidden$
+    </split>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/browse">
+    <browse title="@title@" id="@id@">
+        <!-- @rootBlock@ -->
+        $topElement$
+        <!-- @watchVideoBlock@ -->
+        <placeholder class="watch-videos"/>
+        <!-- @/watchVideoBlock@ -->
+        $nearMeHidden$
+
+        <header type="browse">
+          <title>@categoriesLabel@</title>
+        </header>
+        <!-- @/rootBlock@ -->
+
+        $shelf$
+
+        <!-- @itemLoop@ -->
+        $item$
+        <!-- @/itemLoop@ -->
+      </browse>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/collections_item">
+    <item selected="true">
+        <title>@collectionsLabel@</title>
+    </item>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/item">
+    <item expands="@doesExpand@" data-category-id="@id@" data-parent-id="@parentId@" data-fc-url="@fcUrl@" selected="@isSelected@">
+        <title>@title@</title>
+        <subtitle><number>@count@</number></subtitle>
+        <!-- @downChevron@ --><decorationImage class="software-page-arrow" src="resource://chevronDown"/><!-- @/downChevron@ -->
+    </item>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/grid">
+    <grid class="@class@">
+        <!-- @cardLoop@ -->
+            $card$
+        <!-- @/cardLoop@ -->
+    </grid>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/lockup_brick">
+    <card data-url="@url@">
+        $artwork$
+        <!-- @descriptionBlock@ -->
+        <text class="two-line text-left">$description$</text>
+        <!-- @showDivider@ --><divider /><!-- @/showDivider@ -->
+        <!-- @/descriptionBlock@ -->
+    </card>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/swoosh_hidden">
+    <!-- @nearByAppsBlock@ --><nearByApps type="shelf"><!-- @/nearByAppsBlock@ -->
+        <section class="hidden-swoosh">
+          <header>
+            <title class="shelf-title">@title@</title>
+          </header>
+          <shelf style="visibility:hidden;" class="shelf">
+            <lockup>
+                <img class="app-art" width="@imgSize@" height="@imgSize@" />
+                <title class="lockup-title title-line" maxLines="2">A long lockup title</title>
+                <subtitle maxLines="1">Subtitle</subtitle>
+                <text>Price</text>
+            </lockup>
+          </shelf>
+            <!-- @dividerBlock@ --><divider /><!-- @/dividerBlock@ -->
+        </section>
+    <!-- @nearByAppsBlock@ --></nearByApps><!-- @/nearByAppsBlock@ -->
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/uber_block">
+    <section>
+        $backgroundImage$
+        $styles$
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_app_explore_page/video_shelf">
+    <section>
+        <header>
+            <title>@videoShelfTitle@</title>
+        </header>
+        <shelf>
+            <!-- @videoLoop@ -->
+            <lockup>
+                <video>
+                    <img class="light-art" width="159" height="66" srcset="@posterArtUrl@ 2x" alt="@title@"/>
+                    <asset src="@videoUrl@" keyDelivery="itunes"/>
+                </video>
+                <title>@title@</title>
+            </lockup>
+            <!-- @/videoLoop@ -->
+        </shelf>
+        <!-- @videosDivider@ -->
+        <divider/>
+        <!-- @/videosDivider@ -->
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_artist_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="template">
+            $thankYouPlacard$
+            $backgroundImage$
+            <section>
+                $blocks$
+                $radioPromo$
+                $content$
+            </section>
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_banner_room_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate class="template">
+            $navigationBar$
+            $backgroundImage$
+            <text maxLines="0">@descriptionText@</text>
+            <grid>
+            <!-- @lockupLoop@ -->
+                $lockup$
+             <!-- @/lockupLoop@ -->
+            </grid>
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_banner_room_page/banner_room_lockup">
+    <lockup data-url="@url@" data-content-id="@contentId@" data-content-kind="@kind@" class="@classes@">
+        @artwork@
+        <!-- @descriptionTextBlock@ -->
+        <text maxLines="0">@descriptionText@</text>
+        <!-- @/descriptionTextBlock@ -->
+    </lockup>
+</script>
+<script type="text/html" id="pages/dv14_course_page/details_tab">
+    $description$
+    $outline$
+    $trackList$
+    $learnMore$
+</script>
+
+<script type="text/html" id="pages/dv14_course_page/related_tab">
+    $topCoursesByArtist$
+    $topCollectionsByArtist$
+    $topCoursesByGenre$
+    $topCollectionsByGenre$
+</script><script type="text/html" id="pages/curtain_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $content$
+    </document>
+</script>
+
+<script type="text/html" id="pages/curtain_page/n51">
+    <stackTemplate class="@stackClass@">
+        <navigationBar>
+            <title>@curtainPageTitle@</title>
+        </navigationBar>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <list style="padding:0 0 7">
+            <img src="@watchLogo@" width="98" height="21" />
+        </list>
+        $subtextForPhase$
+        <list style="padding:3 0 15">
+            <img src="@watchImage@" width="158" height="273" />
+        </list>
+        <row>
+            <column/>
+            <column span="8">
+                <lockup>
+                    $bottomText$
+                </lockup>
+            </column>
+            <column/>
+        </row>
+    </stackTemplate>
+</script>
+
+<script type="text/html" id="pages/curtain_page/n61">
+    <stackTemplate class="@stackClass@">
+        <navigationBar>
+            <title>@curtainPageTitle@</title>
+        </navigationBar>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <list>
+            <img src="@watchLogo@" width="117" height="25" />
+        </list>
+        $subtextForPhase$
+        <text class="watch-spacer"></text>
+        <list>
+            <img src="@watchImage@" width="188" height="325" />
+        </list>
+        <row>
+            <column/>
+            <column span="8">
+                <lockup>
+                    $bottomText$
+                </lockup>
+            </column>
+            <column/>
+        </row>
+    </stackTemplate>
+</script>
+
+<script type="text/html" id="pages/curtain_page/n56">
+    <stackTemplate class="@stackClass@">
+        <navigationBar>
+            <title>@curtainPageTitle@</title>
+        </navigationBar>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <text class="watch-spacer"></text>
+        <list style="padding:2 0 7">
+            <img src="@watchLogo@" width="119" height="25" />
+        </list>
+        $subtextForPhase$
+        <list style="padding:6 0 23">
+            <img src="@watchImage@" width="188" height="325" />
+        </list>
+        <row>
+            <column/>
+            <column span="8">
+                <lockup>
+                    $bottomText$
+                </lockup>
+            </column>
+            <column/>
+        </row>
+    </stackTemplate>  
+</script>
+
+<script type="text/html" id="pages/curtain_page/n56/landscape">
+    <stackTemplate class="@stackClass@">
+        <navigationBar>
+            <title>@curtainPageTitle@</title>
+        </navigationBar>
+        <text class="watch-spacer"></text>
+        <row>
+            <column/>
+            <column/>
+            <column span="4">
+                <list>
+                    <img src="@watchImage@" width="167" height="288" />
+                </list>
+            </column>
+            <column span="5">
+                <lockup>
+                    <text class="watch-spacer"></text>
+                    <text class="watch-spacer"></text>
+                    <text class="watch-spacer"></text>
+                    <text class="watch-spacer"></text>
+                    <text class="watch-spacer"></text>
+                    <text class="watch-spacer"></text>
+                    <list>
+                        <img src="@watchLogo@" width="119" height="25" />
+                    </list>
+                    <text class="watch-spacer"></text>
+                    $subtextForPhase$
+                    <text class="watch-spacer"></text>
+                    $bottomText$
+                </lockup>               
+            </column>
+        </row>    
+    </stackTemplate>
+</script><script type="text/html" id="pages/dv14_custom_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="custom-page">
+            $thankYouPlacard$
+            $backgroundImage$
+
+            $content$
+        </stackTemplate>
+    </document>
+</script><script type="text/html" id="pages/dv14_doc_type_lookup_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate class="room-page template">
+            <background class="background"></background>
+            $navigation$
+            $content$
+        </stackTemplate>
+    </document>
+</script>
+
+<!-- No Results-->
+<script type="text/html" id="pages/dv14_doc_type_lookup_page/no_results">
+    <contentUnavailableTemplate>
+        <img src="@imgSrc@" class="error-img"/>
+        <title maxLines="0">@message@</title>
+    </contentUnavailableTemplate>
+</script>
+<script type="text/html" id="pages/dv14_ebook_page/related_tab">
+    $otherBooksInSeries$
+    $moreByArtist$
+    $audiobooksByArtist$
+    $similarTo$
+    $customersAlsoBought$
+    $moreInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_ebook_page/details_tab">
+    $editorsNotes$
+    $description$
+    $screenshots$
+    $criticalReviews$
+    $information$
+    $otherBooksInSeries$
+    $similarTo$
+    $requirements$
+    <text class="copyright" maxLines="0">@copyright@</text>
+</script>
+
+<script type="text/html" id="pages/dv14_ebook_page/explicit_tab">
+    <section>
+        <title maxLines="0">@title@</title>
+        <subtitle maxLines="0">@subtitle@</subtitle>
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_error_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigationBar$
+        <contentUnavailableTemplate>
+            <!-- @showTypeImage@ -->
+                <img src="@imgSrc@" class="error-img"/>
+            <!-- @/showTypeImage@ -->
+            <!-- @showImage@ -->
+                <img width="@imgWidth@" height="@imgHeight@" src="@imgSrc@" class="error-img"/>
+            <!-- @/showImage@ -->
+            <!-- @hasMessage@ -->
+                <title maxLines="0">@message@</title>
+            <!-- @/hasMessage@ -->
+            @explanation@
+            <!-- @hasExplanation@ -->
+                <description maxLines="0">@explanation@</description>
+            <!-- @/hasExplanation@ -->
+            <!-- @includeRetryButton@ -->
+                @retryButton@
+            <!-- @/includeRetryButton@ -->
+            <!-- @includeExternalLink@ -->
+                @externalLink@
+            <!-- @/includeExternalLink@ -->
+        </contentUnavailableTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_global_lists_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="template">
+            $content$
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_global_lists_page/bucketed_lists">
+     <!-- @bucketedListLoop@ -->
+        $bucketedList$
+     <!-- @/bucketedListLoop@ -->
+</script>
+
+<script type="text/html" id="pages/dv14_global_lists_page/navigation_bar">
+   <navigationBar>
+        <title>@title@</title>
+        @editOrClearButton@
+        @doneButton@
+        <!-- @paletteBlock@ -->
+        <palette class="align-center">
+        </palette>
+        <!-- @/paletteBlock@ -->
+    </navigationBar>
+</script>
+
+<script type="text/html" id="pages/dv14_global_lists_page/global_lists_tab/no_content">
+     <contentUnavailable>
+         <title>@title@</title>
+         <description maxLines="0">@noContentMessage@</description>
+     </contentUnavailable>
+</script>
+
+<script type="text/html" id="pages/dv14_global_lists_page/global_lists_tab/sing_in">
+     <contentUnavailable>
+         <title>@title@</title>
+         <description maxLines="0">@noSignInMessage@</description>
+         $signInButton$
+     </contentUnavailable>
+</script>
+
+
+
+<script type="text/html" id="pages/dv14_mix_page/songs_tab">
+    $notes$
+    $trackList$
+</script>
+<script type="text/html" id="pages/dv14_movie_page/details_tab">
+    $preorderDisclaimer$
+    $redownloadDisclaimer$
+    $bundles$
+    $editorsNotes$
+    $trailers$
+    $plotSummary$
+    $bonusContent$
+    $castAndCrew$
+    $information$
+    $languages$
+    $accessibilityInfo$
+    $aboutRentals$
+    <text class="copyright" maxLines="0">@copyright@</text>
+    $divider$
+    @hdSdToggle@
+</script>
+
+<script type="text/html" id="pages/dv14_movie_page/details_tab/bundles">
+    <section>
+        <header>
+            <title>@title@</title>
+        </header>
+        $bundles$
+    </section>
+    <divider class="divider"/>
+</script>
+
+<script type="text/html" id="pages/dv14_movie_page/related_tab">
+    $viewersAlsoBought$
+    $moreByActors$
+    $moreByDirectors$
+    $moreInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_movie_page/bonus_content">
+    <section>
+        <header>
+            <title>@title@</title>
+        </header>
+        <row>
+            <column>
+                <lockup>@bonusScreenshot@</lockup>
+            </column>
+        </row>
+        @aboutBonusContent@
+        <button type="link" data-url="@learnMoreUrl@" class="extras-requirements" maxLines="0">@learnMoreText@</button>
+        <divider class="divider"/>
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_movie_page/bonus_content_ipad">
+    <section>
+        <header>
+            <title>@title@</title>
+        </header>
+        <lockup type="list" class="extras-screenshot-lockup">
+            @bonusScreenshot@
+            @aboutBonusContent@
+        </lockup>
+        <button type="link" data-url="@learnMoreUrl@" class="extras-requirements" maxLines="0">@learnMoreText@</button>
+        <divider class="divider"/>
+    </section>
+</script>
+<script type="text/html" id="pages/dv14_movie_bundle_page/details_tab">
+    $includedMovies$
+    $bonusContent$
+    <!-- @hasCopyright@ -->
+        <text class="copyright" maxLines="0">@copyright@</text>
+    <!-- @/hasCopyright@ -->
+    $divider$
+    @hdSdToggle@
+</script>
+
+<script type="text/html" id="pages/dv14_movie_bundle_page/related_tab">
+    $viewersAlsoBought$
+    $moreByActors$
+    $moreByDirectors$
+</script>
+
+<script type="text/html" id="pages/dv14_movie_bundle_page/bonus_content">
+    <section>
+        <header>
+            <title>@bonusContentTitle@</title>
+            <subtitle maxLines="10">@bonusContentExplanation@</subtitle>
+        </header>
+        <!-- @bonusLoop@ -->
+        <text maxLines="3"><b>@bonusContentItem@</b></text>
+        <!-- @/bonusLoop@ -->
+    </section>
+    <divider/>
+</script><script type="text/html" id="pages/dv14_multi_room_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="multi-room-page template">
+            $thankYouPlacard$
+            $backgroundImage$
+            <!-- @uberText@ -->
+            <description maxLines="3">@text@</description>
+            <!-- @/uberText@ -->
+            $blocks$
+            $content$
+            <accountButtons class="link-color" />
+            $emailSupportLink$
+        </stackTemplate>
+    </document>
+</script><script type="text/html" id="pages/dv14_music_video_page/related_tab">
+    $moreByArtist$
+    $customersAlsoBought$
+    $moreInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_music_video_page/details_tab">
+    $infoList$
+</script>
+<script type="text/html" id="pages/dv14_nearby_apps_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate class="room-page template">
+            <background class="background"></background>
+            $navigation$
+            <nearByApps style="visibility:hidden;"/>
+
+            <activityIndicator>
+                <text>@loadingText@</text>
+            </activityIndicator>
+
+            $content$
+        </stackTemplate>
+    </document>
+</script>
+
+<!-- No Results-->
+<script type="text/html" id="pages/dv14_nearby_apps_page/no_results">
+    <contentUnavailableTemplate>
+        <img src="@imgSrc@" class="error-img"/>
+        <title maxLines="0">@message@</title>
+    </contentUnavailableTemplate>
+</script>
+<script type="text/html" id="pages/dv14_personalized_room_page">
+    $content$
+</script>
+
+<!-- Not Signed in or No Results-->
+<script type="text/html" id="pages/dv14_personalized_room_page/alert_view">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <!-- Right now there's a bug that requires us to have a nav bar above a contentUnavailableTemplate-->
+        <navigationBar>
+        </navigationBar>
+        <contentUnavailableTemplate>
+            <title class="three-line">@title@</title>
+            <description class="three-line">@description@</description>
+           $signInButton$
+        </contentUnavailableTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_podcast_page/related_tab">
+    $moreByArtist$
+    $listenersAlsoBought$
+    $topPodcastsInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_podcast_page/details_tab">
+    $notes$
+    $description$
+    $trackList$
+    <text class="copyright" maxLines="0">@copyright@</text>
+</script><script type="text/html" id="pages/dv14_purchases_content_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <navigationBar>
+            <navigationTitle>@navigationTitle@</navigationTitle>
+            <title>@navigationTitle@</title>
+            @editOrClearButton@
+            $doneButton$
+        </navigationBar>
+
+        <stackTemplate>
+            <section>
+                <grid id="purchases-stack-grid">
+                </grid>
+            </section>
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_purchases_content_page/artist_based">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <navigationBar>
+            <navigationTitle>@navigationTitle@</navigationTitle>
+            <title>@navigationTitle@</title>
+            @editOrClearButton@
+            $doneButton$
+        </navigationBar>
+
+        <stackTemplate>
+            <section>
+            </section>
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_purchases_media_type_navigator_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <navigationBar>
+            <navigationTitle>@navigationTitle@</navigationTitle>
+            <!-- @showTitle@ -->
+                <title>@navigationTitle@</title>
+            <!-- @/showTitle@ -->
+        </navigationBar>
+
+        <stackTemplate>
+            $tabbedPane$
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_purchases_media_type_navigator_page/grid">
+    <grid>
+        @listItems@
+    </grid>
+</script>
+
+<script type="text/html" id="pages/dv14_purchases_media_type_navigator_page/list_item">
+        <lockup @attributes@>
+            <list class="primary-color">
+               @title@
+               <spacer/>
+               <text class="text-right"><number>@count@</number></text>
+            </list>
+        </lockup>
+</script>
+
+
+
+<script type="text/html" id="pages/dv14_purchases_media_type_navigator_page/chevron">
+    <decorationImage src="resource://arrow" />
+</script>
+<script type="text/html" id="pages/dv14_purchases_media_type_selector_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <navigationBar>
+            <navigationTitle>@navigationTitle@</navigationTitle>
+            <!-- @showTitle@ -->
+                <title>@navigationTitle@</title>
+            <!-- @/showTitle@ -->
+        </navigationBar>
+
+        <stackTemplate>
+            <!-- @hasFamilyMembers@ -->
+                <title class="grid-heading">@yourPurchases@</title>
+            <!-- @/hasFamilyMembers@ -->
+            <grid>
+                <!-- @mediaTypeLockupLoop@ -->
+                    @mediaTypeLockup@
+                <!-- @/mediaTypeLockupLoop@ -->
+            </grid>
+            <!-- @hasFamilyMembers@ -->
+                <title class="grid-heading">@familyPurchases@</title>
+                <grid>
+                    <!-- @familyMembersLockupLoop@ -->
+                        @familyMemberLockup@
+                    <!-- @/familyMembersLockupLoop@ -->
+                </grid>
+            <!-- @/hasFamilyMembers@ -->
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_purchases_media_type_selector_page/family_member_lockup">
+    <lockup data-itunes-preferred-dsid="@preferredDsid@">
+        <img src="@avatarImage@" height="30" width="30" class="purchases-avatar" />
+        @title@
+        <decorationImage src="resource://arrow" class="arrow"></decorationImage>
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_purchases_media_type_selector_page/media_type_lockup">
+    <lockup @attributes@>
+        <img src="@glyphUrl@" height="20" width="20" class="purchases-avatar" />
+        @title@
+        <decorationImage src="resource://arrow" class="arrow" />
+    </lockup>
+</script>
+<script type="text/html" id="pages/dv14_purchases_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        <navigationBar class="hidden-bar">
+            <navigationTitle>@navigationTitle@</navigationTitle>
+            <title>@navigationTitle@</title>
+            $editOrClearButton$
+            $doneButton$
+        </navigationBar>
+
+        <splitViewTemplate displayMode="all" id="splitView">
+            <split id="leftSplit" class="left-split"/>
+            <split id="rightSplit" class="right-split"/>
+        </splitViewTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_grouping_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate class="template">
+            $banner$
+            $contentSection$
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_grouping_mainstack">
+    <section id="mainStack">
+        <background class="background">
+            $backgroundImage$
+        </background>
+        $thankYouPlacard$
+        <!-- @headerBlock@ -->
+            <img class="@carouselItemClass@" id="@adamId@" width="@width@" height="@height@" src="@artworkUrl@" alt="@alt@" disabled="true" />
+        <!-- @/headerBlock@ -->
+
+        $flowcase$
+
+        $main_stack$
+        <!-- @quickLinksBlock@ -->
+        <header>
+            <title>
+                <text>@title@</text>
+            </title>
+        </header>
+        <grid id="quickLinksGrid" class="grid ">
+            <!-- @quickLinksLoop@ -->
+              $quickLinkButton$
+            <!-- @/quickLinksLoop@ -->
+        </grid>
+        <!-- @/quickLinksBlock@ -->
+       <accountButtons class="link-color" />
+       $emailSupportLink$
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_charts">
+    <section>
+        $charts$
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_grouping_loading">
+    <loadingTemplate class="template">
+        <activityIndicator>
+            <text>@text@</text>
+        </activityIndicator>
+    </loadingTemplate>
+</script>
+
+<!-- Main Template -->
+<script type="text/html" id="pages/dv14_search_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+
+        $navigationBar$
+        $body$
+    </document>
+</script>
+
+<!-- Navigation Bar -->
+<script type="text/html" id="pages/dv14_search_page/navigation_bar">
+  <navigationBar class="@class@">
+      <!-- @navigationTitleBlock@ -->
+      <navigationTitle>@navigationTitle@</navigationTitle>
+      <!-- @/navigationTitleBlock@ -->
+      $title$
+      @searchField@
+      $relatedSearches$
+  </navigationBar>
+</script>
+
+<!-- Related Searches -->
+<script type="text/html" id="pages/dv14_search_page/relatedSearches">
+    <palette class="@class@">
+        <!-- @BackButton@ -->
+        <button itsId="RelatedSearchesBackButton"
+                class="related-searches-back-button"
+                type="image"><img class="software-page-arrow" src="resource://ChevronMediumBack"/></button>
+        <divider/>
+        <!-- @/BackButton@ -->
+
+        <text>@relatedLabel@</text>
+        <list>
+            <!-- @searchesLoop@ -->
+            $relatedSearchItem$
+            <!-- @/searchesLoop@ -->
+        </list>
+    </palette>
+</script>
+
+<!-- Tab for all bubbles -->
+<script type="text/html" id="pages/dv14_search_page/all_tab">
+    $resultsStack$
+</script>
+
+<script type="text/html" id="pages/dv14_search_page/sponsored_search">
+    <trendingSearchAd lineItem="thisIsATesTLineItem">
+        $sponsoredSearchItem$
+        <button class="align-right" type="image">Ad<img src="resource://adPrivacy" alt="Ad transparency button"/></button>
+    </trendingSearchAd>
+</script>
+
+<script type="text/html" id="pages/dv14_search_page/trending_searches">
+    <trendingSearchTemplate>
+        <!-- @trendingSearchesBlock@ -->
+        <title>@title@</title>
+        <!-- @searchesLoop@ -->
+        $trendingSearchItem$
+        <!-- @/searchesLoop@ -->
+        <!-- @/trendingSearchesBlock@ -->
+    </trendingSearchTemplate>
+</script>
+
+<!-- No Results-->
+<script type="text/html" id="pages/dv14_search_page/no_results">
+    <contentUnavailableTemplate>
+        <img src="@imgSrc@" class="search-no-results-img"/>
+        <!-- @messageBlock@ -->
+            <title maxLines="0">@message@</title>
+        <!-- @/messageBlock@ -->
+        <!-- @explanationBlock@ -->
+            <description maxLines="0">@explanation@</description>
+        <!-- @/explanationBlock@ -->
+    </contentUnavailableTemplate>
+</script>
+
+<!-- Results -->
+<script type="text/html" id="pages/dv14_search_page/results">
+    <stackTemplate class="template">
+        $banner$
+        $results$
+    </stackTemplate>
+</script>
+
+<!-- Search field -->
+<script type="text/html" id="pages/dv14_search_page/title">
+    <title class="align-center">@title@</title>
+</script>
+<script type="text/html" id="pages/dv14_software_page/related_tab">
+  $moreByArtist$
+  $customersAlsoBought$
+  $topApps$
+  $contentUnavailable$
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/content_unavailable">
+<contentUnavailable>
+  <img class="product-unavailable" src="resource://placeholderApps"/>
+  <description maxLines="0">@message@</description>
+</contentUnavailable>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/details_tab">
+  $notes$
+  $bundleRelated$
+  $screenshots$
+  $expandScreenshots$
+  $whatsNewInThisIssue$
+  $description$
+  $whatsNew$
+  $supports$
+  $infoList$
+  @inAppPurchases@
+  @versionHistory@
+  <grid class="grid-full">
+      <!-- @hasWebsite@ -->
+      <lockup data-url="@devWebsiteUrl@" data-page-target="external" class="software-page-link">
+        <title>@devWebsite@</title>
+        <decorationImage class="software-page-arrow" src="resource://arrow"/>
+      </lockup>
+      <divider class="divider"/>
+      <!-- @/hasWebsite@ -->
+      <!-- @hasLicense@ -->
+      <lockup data-url="@licenseUrl@" class="software-page-link">
+          <title>@licenseLabel@</title>
+          <decorationImage class="software-page-arrow" src="resource://arrow"/>
+      </lockup>
+      <divider class="divider"/>
+      <!-- @/hasLicense@ -->
+      <!-- @hasPrivacyPolicy@ -->
+      <lockup data-url="@privacyPolicyUrl@" data-page-target="external" class="software-page-link">
+          <title>@privacyPolicy@</title>
+          <decorationImage class="software-page-arrow" src="resource://arrow"/>
+      </lockup>
+      <divider class="divider"/>
+      <!-- @/hasPrivacyPolicy@ -->
+      <!-- @hasDeveloperApps@ -->
+      <lockup data-url="@artistUrl@" class="software-page-link">
+        <title>@devApps@</title>
+        <decorationImage class="software-page-arrow" src="resource://arrow"/>
+      </lockup>
+      <divider class="divider"/>
+      <!-- @/hasDeveloperApps@ -->
+      @developerInfo@
+      <!-- @hasDeveloperInfo@ -->
+      <divider class="divider"/>
+      <!-- @/hasDeveloperInfo@ -->
+  </grid>
+  <text class="copyright" maxLines="0">@copyright@</text>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/also_in">
+    <header>
+        <title>@title@</title>
+    </header>
+    $lockup$
+    <divider class="divider"/>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/supports">
+    <header>
+        <title>@title@</title>
+    </header>
+    <!-- @list@ -->
+    <lockup type="list" class="position-top">
+        <img src="@source@" height="@height@" width="@width@" />
+        <title>@name@</title>
+        <subtitle maxLines="0">@blurb@</subtitle>
+    </lockup>
+    <!-- @/list@ -->
+    <divider class="divider"/>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/screenshots_loop">
+    <section>
+        <!-- @loop@ -->
+        $screenshot_row$
+        <!-- @/loop@ -->
+    </section>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/screenshot_expand">
+    <lockup class="software-page-link">
+        <header><title>@title@</title></header>
+        <description class="software-screenshot-devices">@subtitle@</description>
+        <decorationImage src="resource://chevronDown"/>
+    </lockup>
+    <divider class="divider"/>
+</script>
+
+
+<script type="text/html" id="pages/dv14_software_page/link_item">
+    <lockup class="software-page-link">
+        <title>@title@</title>
+        <decorationImage class="software-page-arrow" src="resource://arrow"/>
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/link_item_expand">
+    <lockup class="software-page-link">
+        <title>@title@</title>
+        @link@
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/grid_top">
+    <grid class="grid-top no-padding">
+        @item@
+    </grid>
+    @expand@
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/expand">
+    <expand open="false" id="@id@">
+        @elem@
+    </expand>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/doc_stack_template">
+    <document>
+        <stackTemplate>
+            @elem@
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/version_history">
+    <!-- @loop@ -->
+    @historyItem@
+    <!-- @/loop@ -->
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/in_app_purchases">
+    <trackList class="no-padding">
+        <!-- @trackLoop@ -->
+        <track class="@class@">
+            <ordinal>@number@</ordinal>
+            <title maxLines="2">@name@</title>
+            <text>@price@</text>
+        </track>
+        <!-- @/trackLoop@ -->
+    </trackList>
+</script>
+
+<script type="text/html" id="pages/dv14_software_page/developer_info">
+    <document>
+        <stackTemplate>
+            <infoList type="titleLeft">
+                <info>
+                    <title class="info-title">@tradeNameLabel@</title>
+                    <text class="info-value" maxLines="0">@tradeName@</text>
+                </info>
+
+                <!-- @tradeRepBlock@ -->
+                <info>
+                    <title class="info-title">@tradeRepLabel@</title>
+                    <text class="info-value" maxLines="0">@tradeRep@</text>
+                </info>
+                <!-- @/tradeRepBlock@ -->
+
+                <!-- @addressBlock@ -->
+                <info>
+                    <title class="info-title">@addressLabel@</title>
+                    <text class="info-value" maxLines="0">@address123@</text>
+                    <text class="info-value" maxLines="0">@city@, @state@ @zip@</text>
+                    <text class="info-value" maxLines="0">@country@</text>
+                </info>
+                <!-- @/addressBlock@ -->
+
+                <!-- @addressKoreanBlock@ -->
+                <info>
+                    <title class="info-title">@addressLabel@</title>
+                    <text class="info-value" maxLines="0">@zip@</text>
+                    <text class="info-value" maxLines="0">@country@</text>
+                    <text class="info-value" maxLines="0">@state@ @city@</text>
+                    <text class="info-value" maxLines="0">@address123@</text>
+                </info>
+                <!-- @/addressKoreanBlock@ -->
+
+                <!-- @phoneBlock@ -->
+                <info>
+                    <title class="info-title">@phoneLabel@</title>
+                    <text class="info-value" maxLines="0">@phone@</text>
+                </info>
+                <!-- @/phoneBlock@ -->
+
+                <!-- @emailBlock@ -->
+                <info>
+                    <title class="info-title">@emailLabel@</title>
+                    <text class="info-value" maxLines="0">@email@</text>
+                </info>
+                <!-- @/emailBlock@ -->
+            </infoList>
+            <divider class="divider"/>
+
+            <!-- @ecommerceRegNumBlock@ -->
+            <infoList type="titleAbove">
+                <info>
+                    <title class="info-title">@ecommerceRegNumLabel@</title>
+                    <text class="info-value" maxLines="0">@ecommerceRegNum@</text>
+                </info>
+            </infoList>
+            <divider class="divider"/>
+            <!-- @/ecommerceRegNumBlock@ -->
+
+            <!-- @businessRegNumBlock@ -->
+            <infoList type="titleAbove">
+                <info>
+                    <title class="info-title">@businessRegNumLabel@</title>
+                    <text class="info-value" maxLines="0">@businessRegNum@</text>
+                </info>
+            </infoList>
+            <divider class="divider"/>
+            <!-- @/businessRegNumBlock@ -->
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_software_only_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate class="template">
+           <button data-url="@targetUrl@">@openAppMessage@</button>
+        </stackTemplate>
+    </document>
+</script><script type="text/html" id="pages/dv14_software_eula_page">
+    <document>
+        <stackTemplate>
+            <navigationBar>
+                <title>@title@</title>
+            </navigationBar>
+            <!-- @textLoop@ -->
+                <text maxLines="1000">@text@</text>
+            <!-- @/textLoop@ -->
+        </stackTemplate>
+    </document>
+</script><script type="text/html" id="pages/dv14_top_authors_content">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <stackTemplate>
+            <contentUnavailable>
+                <img width="180" height="180" src="@contentUnavailableImgSrc@"/>
+                <title>@title@</title>
+                <description maxLines="0">@description@</description>
+            </contentUnavailable>
+        </stackTemplate>
+    </document>
+</script>
+
+
+<script type="text/html" id="pages/dv14_top_authors_content/filter_bar">
+    <palette>
+        <filterBar>
+        <button id="authorPageButton" />
+        <!-- @sortBlock@ -->
+        <label class="align-right"><text>@sortBy@</text></label>
+        @sortSelect@
+        <!-- @/sortBlock@ -->
+        </filterBar>
+    </palette>
+</script>
+
+<script type="text/html" id="pages/dv14_top_authors_content/sort_select">
+    <select class="align-right">
+        <!-- @optionLoop@ -->
+            @option@
+        <!-- @/optionLoop@ -->
+    </select>
+</script>
+
+<script type="text/html" id="pages/dv14_top_authors_content/sort_option">
+    <option selected="@selected@" value="@value@">@label@</option>
+</script>
+<script type="text/html" id="pages/dv14_top_authors_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigation$
+        <splitViewTemplate displayMode="all" />
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_top_authors_page_list">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate>
+            $navigation$
+            <indexBar>
+                <indexBarEntryList type="localeStandard"/>
+            </indexBar>
+            <collectionList>
+                $wrapper$
+                $content$
+            </collectionList>
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_tv_season_page/details_tab">
+    $tuneIn$
+    $editorsNotes$
+    $description$
+    <grid class="grid">
+        $episodeList$
+    </grid>
+    <divider class="divider"/>
+    $infoList$
+    $passInfo$
+    <text class="copyright" maxLines="0">@copyright@</text>
+    <!-- @hasHdSdToggle@ -->
+    <divider class="divider"/>
+    <!-- @/hasHdSdToggle@ -->
+    @hdSdToggle@
+</script>
+
+<script type="text/html" id="pages/dv14_tv_season_page/episode_item_iphone">
+    <lockup data-url="@url@" data-content-id="@contentId@" data-content-kind="@kind@" type="list">
+        <title>@title@</title>
+        <description class="description" maxLines="2">@description@</description>
+        <decorationImage class="arrow" src="resource://arrow"/>
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_tv_season_page/episode_item_ipad">
+    <lockup type="list" class="position-top">
+        $videoPreview$
+        <header>
+            <title class="@titleClass@" maxLines="2">@title@</title>
+            <!-- @needsSpacer@ -->
+            <text class="spacer"><br/></text>
+            <!-- @/needsSpacer@ -->
+            <subtitle class="episode-date">
+                <!-- @itemLoop@ -->
+                $item$
+                <!-- @/itemLoop@ -->
+            </subtitle>
+            <!-- @needsSpacer@ -->
+            <text class="spacer"><br/></text>
+            <!-- @/needsSpacer@ -->
+        </header>
+        <description class="description" maxLines="2" moreLabel="@moreLabel@">@description@</description>
+        <offer>
+            @buyButton@
+        </offer>
+        <!-- TODO: jellenbogen once we figure out decorationImages <img src="resource://ChevronMediumBack"/> -->
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_tv_season_page/related_tab">
+    $moreSeasons$
+    $viewersAlsoBought$
+    $moreInGenre$
+</script>
+
+<script type="text/html" id="pages/dv14_tv_season_page/tune_in_lockup">
+    <lockup type="list" disabled="true">
+        <!-- @hasImage@ -->
+        <img src="@source@" height="@height@" width="@width@" />
+        <!-- @/hasImage@ -->
+        <title maxLines="0">@title@</title>
+    </lockup>
+</script>
+
+<script type="text/html" id="pages/dv14_tv_season_page/episode_info_list">
+    <list class="episode-info">
+
+    </list>
+</script>
+<script type="text/html" id="pages/dv14_unsupported_product_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigationBar$
+        <contentUnavailableTemplate>
+            $artwork$
+            <title maxLines="0">@message@</title>
+            <description maxLines="0">@explanation@</description>
+            $learnMoreButton$
+        </contentUnavailableTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/dv14_unsupported_atb_product_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        $navigationBar$
+        <stackTemplate>
+            <lockup class="position-center align-center text-center">
+                <title maxLines="0">@prompt@</title>
+            </lockup>
+            <divider class="divider-full" />
+            <lockup type="product" class="position-center align-center text-center">
+                $artwork$
+                $title$
+                $subtitle$
+                $notice$
+                $description$
+            </lockup>
+            $details$
+        </stackTemplate>
+    </document>
+</script>
+<script type="text/html" id="pages/dv14_video_playlist">
+    <document>
+        <playlist>
+            <!-- @videoLoop@ -->
+            $video$
+            <!-- @/videoLoop@ -->
+        </playlist>
+    </document>
+</script>
+<script type="text/html" id="pages/watch_video_page">
+    <document>
+        <head>
+            $styles$
+        </head>
+        <stackTemplate class="watch-bg">
+            $navigationBar$
+            <text></text>
+            $lockups$
+            <text></text>
+            $learnMoreLink$
+            <text></text>
+        </stackTemplate>
+    </document>
+</script>
+
+<script type="text/html" id="pages/watch_video_page/navigation_bar">
+    <navigationBar>
+        <title>@videoPageTitle@</title>
+    </navigationBar>
+</script>
+
+<script type="text/html" id="pages/watch_video_page/video_lockup">
+    <grid class="watch-video-grid">
+    <lockup class="watch-video-lockup">
+        <video alt="@title@">
+            <img class="light-art" width="320" height="180" disabled="false" srcset="@posterArtUrl@ 2x"/>
+            <asset src="@videoUrl@" keyDelivery="itunes"/>
+        </video>
+    </lockup>
+    </grid>
+    <text class="watch-video-title">@title@</text>
+</script>
+
+<script type="text/html" id="pages/watch_video_page/video_lockup/n56_landscape">
+    <row>
+        <column>
+            <lockup>
+            <video alt="@title@">
+                <img class="light-art" width="320" height="180" disabled="false" srcset="@posterArtUrl@ 2x"/>
+                <asset src="@videoUrl@" keyDelivery="itunes"/>
+            </video>
+            </lockup>
+        </column>
+    </row>
+    <text class="watch-video-title">@title@</text>
+    <text></text>
+</script><script type="text/html" id="lockups/dv14_category_lockup">
+    <lockup  class="@classes@" @attributes@>
+        @artwork@
+        <title maxLines="@maxLines@" class="lockup-title">@category@</title>
+        <!-- @hasChildren@ -->
+            <decorationImage class="@arrowClass@" src="resource://arrow"/>
+        <!-- @/hasChildren@ -->
+    </lockup>
+</script><script type="text/html" id="lockups/dv14_product_lockup">
+    <section>
+        <lockup type="product" class="product-lockup">
+            $artwork$
+            $title$
+            @shareButton@
+            $subtitle$
+            $line2$
+            $line3$
+            $notice$
+            $badges$
+            $additionalInfo$
+            <spacer/>
+            $details$
+            $pills$
+            $offers$
+            $additionalAppTypesInLockup$
+        </lockup>
+        $cmcInfo$
+        $postLockupOffers$
+        $radioPromo$
+        $badgesNew$
+        $extrasPromo$
+        $postLockupContent$
+        $additionalAppTypes$
+    </section>
+</script>
+
+<script type="text/html" id="lockups/dv14_product_lockup/item_container">
+    <section>
+        <!-- @itemLoop@ -->
+        $item$
+        <!-- @/itemLoop@ -->
+    </section>
+</script>
+
+<script type="text/html" id="lockups/dv14_product_lockup/list">
+    <list class="@listClass@">
+        <!-- @itemLoop@ -->
+        $item$
+        <!-- @/itemLoop@ -->
+    </list>
+</script>
+
+<script type="text/html" id="lockups/dv14_product_lockup/cmc_info">
+    <lockup type="list">
+        <title>$cmcText$</title>
+        <subtitle>@regularPrice@</subtitle>
+        @buyButton@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_product_lockup/list_lockup">
+    <lockup type="list">
+        <!-- @hasImage@ -->
+            <img src="@source@" height="@height@" width="@width@" />
+        <!-- @/hasImage@ -->
+        <title>@title@</title>
+        <!-- @hasSubtitle@ -->
+        <subtitle>@subTitle@</subtitle>
+        <!-- @/hasSubtitle@ -->
+        @buyButton@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_product_lockup/offers">
+    <section>
+        <!-- @offerLoop@ -->
+            $offer$
+        <!-- @/offerLoop@ -->
+    </section>
+</script>
+
+
+<script type="text/html" id="components/dv14_product_lockup/radio_promo">
+    <lockup type="list" class="radio-promo">
+        $artwork$
+
+        <!-- @titleBadgeBlock@ -->
+        <title><badge src="@badgeUrl@" /></title>
+        <!-- @/titleBadgeBlock@ -->
+
+        <!-- @titleBlock@ -->
+        <title maxLines="1">@title@</title>
+        <!-- @/titleBlock@ -->
+
+        <!-- @subtitleBlock@ -->
+        <subtitle maxLines="1">@subtitle@</subtitle>
+        <!-- @/subtitleBlock@ -->
+
+        <decorationImage class="arrow" src="resource://arrow"/>
+    </lockup>
+</script>
+
+<script type="text/html" id="components/dv14_product_lockup/extras_promo">
+    <lockup type="list" class="extras-badge-lockup">
+        <img src="@glyph@" class="" width="@width@" height="@height@"/>
+        <text class="extras-title">@bonusTitle@ @bonusText@</text>
+   </lockup>
+</script>
+<script type="text/html" id="lockups/dv14_purchases_lockup">
+    <lockup class="@classes@" @attributes@ >
+    @input@
+    <!-- @previewBlock@ -->
+    <previewControl disabled="@disablePreviewControl@" preview-url="@previewUrl@" data-content-id="@previewContentId@">
+        <!-- @/previewBlock@ -->
+        @artwork@
+        <!-- @previewBlock@ -->
+    </previewControl>
+    <!-- @/previewBlock@ -->
+    @details@
+    <placeholder redownloadButton/>
+    @actions@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_purchases_lockup/actions">
+    <actions>
+        <!-- @actionLoop@ -->
+        @action@
+        <!-- @/actionLoop@ -->
+    </actions>
+</script>
+
+<script type="text/html" id="lockups/dv14_purchases_lockup/input">
+    <input type="checkbox"/>
+</script>
+
+<script type="text/html" id="lockups/dv14_purchases_lockup/item_container">
+    <!-- @itemLoop@ -->
+    @item@
+    <!-- @/itemLoop@ -->
+</script>
+<script type="text/html" id="lockups/dv14_small_lockup">
+    <lockup class="@classes@" @attributes@ >
+        @input@
+        <!-- @ordinalBlock@ -->
+        <ordinal>@ordinal@</ordinal>
+        <!-- @/ordinalBlock@ -->
+        <!-- @previewBlock@ -->
+        <previewControl disabled="@disablePreviewControl@" preview-url="@previewUrl@" data-content-id="@previewContentId@">
+            <!-- @/previewBlock@ -->
+            @artwork@
+            <!-- @previewBlock@ -->
+        </previewControl>
+        <!-- @/previewBlock@ -->
+        <section class="details">
+            @details@
+        </section>
+        @offer@
+        <!-- @decorationImageBlock@ -->
+        <decorationImage class="arrow" src="resource://arrow"/>
+        <!-- @/decorationImageBlock@ -->
+        $actions$
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_small_lockup/item_container">
+    <!-- @itemLoop@ -->
+    @item@
+    <!-- @/itemLoop@ -->
+</script>
+
+<script type="text/html" id="lockups/dv14_small_lockup/actions">
+    <actions>
+        <!-- @actionLoop@ -->
+            @action@
+        <!-- @/actionLoop@ -->
+    </actions>
+</script>
+        
+<script type="text/html" id="lockups/dv14_small_lockup/button_action">
+    <button>@actionName@</button>
+</script>
+
+<script type="text/html" id="lockups/dv14_small_lockup/input">
+     <input type="checkbox"/>
+</script>
+        
+<script type="text/html" id="lockups/dv14_small_lockup/offer">
+    <offer @attributes@>
+        @buyButton@
+        <!-- @hasInAppPurchases@ -->
+        <notice class="@iapClass@" maxLines="0">@iapText@</notice>
+        <!-- @/hasInAppPurchases@ -->
+    </offer>
+</script>
+<script type="text/html" id="lockups/dv14_trailer_lockup">
+    <card data-url="@url@" data-content-id="@adamId@" data-content-kind="@kind@" class="@classes@" @attributes@>
+        $trailer$
+        $lockup$
+    </card>
+</script>
+<script type="text/html" id="lockups/dv14_card">
+    <card class="@classes@" @attributes@>
+        @lockup@
+        @notifyMeDescription@
+        @additionalDetails@
+        @iAdText@
+        @body@
+        @iAdFeedback@
+    </card>
+</script>
+
+<script type="text/html" id="lockups/dv14_card/app_media">
+    <list>@media@</list>
+</script>
+
+<script type="text/html" id="lockups/dv14_card/bundle">
+    <header class="app-bundle-artwork-title">
+        <title>@title@</title>
+    </header>
+    <list class="@listClass@">
+        @childLockups@
+    </list>
+</script>
+
+<script type="text/html" id="lockups/dv14_card/bundle_lockup">
+    <lockup>
+      @artwork@
+      <title class="position-center">@title@</title>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_card/additional_details">
+    @watchEnabledLockup@
+    @messagesEnabledLockup@
+</script>
+
+<script type="text/html" id="lockups/dv14_card/additional_detail_lockup">
+    <lockup type="list" class="additional-app-available-lockup">
+        @badge@
+        <text class="additional-app-available-title">@title@</text>
+   </lockup>
+</script><script type="text/html" id="lockups/dv14_editorial_card">
+    <card class="editorial-card @classes@" @attributes@>
+      $artwork$
+      <title>@title@</title>
+      <text maxLines="0">@description@</text>
+      <button data-url="@button.url@" data-page-target="@button.target@"><text>@button.label@</text></button>
+    </card>
+</script><script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v1">
+    <lockup class="lockup-orientation-v1" @attributes@>
+        @editorial@
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text/>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v2">
+    <card class="lockup-orientation-v2 editorial-lockup-card" @attributes@>
+        <lockup>
+            @artwork@
+            @details@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+        <lockup>
+            @editorial@
+            @mediaButton@
+            @offer@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+    </card>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v3">
+    <lockup class="lockup-orientation-v3" @attributes@>
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        @editorial@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v4">
+    <card class="lockup-orientation-v4 editorial-lockup-card" @attributes@>
+        <lockup>
+            @editorial@
+            @mediaButton@
+            @offer@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+        <lockup>
+            @artwork@
+            @details@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+    </card>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v5_ipad">
+    <lockup class="lockup-orientation-v5-ipad" @attributes@>
+        @editorial@
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text/>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/orientation_v5_iphone">
+    <lockup disabled="true">
+        @editorial@
+    </lockup>
+    <lockup @attributes@>
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text/>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/item_container">
+    <!-- @itemLoop@ -->
+    @item@
+    <!-- @/itemLoop@ -->
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/actions">
+    <actions>
+        <!-- @actionLoop@ -->
+            @action@
+        <!-- @/actionLoop@ -->
+    </actions>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/button_action">
+    <button>@actionName@</button>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/input">
+     <input type="checkbox"/>
+</script>
+
+<script type="text/html" id="lockups/dv14_editorial_product_lockup/offer">
+    <offer>
+        @buyButton@
+        <!-- @hasInAppPurchases@ -->
+        <notice class="@iapClass@" maxLines="0">@iapText@</notice>
+        <!-- @/hasInAppPurchases@ -->
+    </offer>
+</script><script type="text/html" id="lockups/dv14_custom_lockup/orientation_v0">
+    <lockup class="lockup-orientation-v0 align-@align@" @attributes@>
+        @editorialTitle@
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text class="editorial-spacer"><br/></text>
+        @editorial@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v1">
+    <lockup class="lockup-orientation-v1" @attributes@>
+        @editorial@
+        <text class="editorial-spacer"><br/></text>
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v2">
+    <card class="lockup-orientation-v2 editorial-lockup-card" @attributes@>
+        <lockup>
+            @editorialTitleTop@
+            @artwork@
+            @details@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+        <lockup>
+            @editorial@
+            @mediaButton@
+            @offer@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+    </card>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v3">
+    <lockup class="lockup-orientation-v3 align-@align@" @attributes@>
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        @editorial@
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v4">
+    <card class="lockup-orientation-v4 editorial-lockup-card" @attributes@>
+        <lockup>
+            @editorial@
+            @mediaButton@
+            @offer@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+        <lockup>
+            @artwork@
+            @details@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+    </card>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v5_ipad">
+    <lockup class="lockup-orientation-v5-ipad" @attributes@>
+        @editorial@
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text/>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/orientation_v5_iphone">
+    <lockup disabled="true">
+        @editorial@
+    </lockup>
+    <lockup @attributes@>
+        @artwork@
+        @details@
+        @mediaButton@
+        @offer@
+        <text/>
+    </lockup>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/item_container">
+    <!-- @itemLoop@ -->
+    @item@
+    <!-- @/itemLoop@ -->
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/actions">
+    <actions>
+        <!-- @actionLoop@ -->
+            @action@
+        <!-- @/actionLoop@ -->
+    </actions>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/button_action">
+    <button>@actionName@</button>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/input">
+     <input type="checkbox"/>
+</script>
+
+<script type="text/html" id="lockups/dv14_custom_lockup/offer">
+    <offer>
+        @buyButton@
+        <!-- @hasInAppPurchases@ -->
+        <notice class="@iapClass@" maxLines="0">@iapText@</notice>
+        <!-- @/hasInAppPurchases@ -->
+    </offer>
+</script><script type="text/html" id="blocks/dv14_editorial_block/wrapper_lockup">
+    <section>
+    <row class="grid-1-col">
+        <column>
+            <card class="editorial-lockup-card align-@align@">
+                <lockup>
+                    $content$
+                </lockup>
+            </card>
+        </column>
+    </row>
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_editorial_block/content">
+    @artwork@
+    <!-- @titleBlock@ -->
+    <title class="title-size-@editorial.titleSize@ title-weight-@editorial.titleWeight@ uber-title-color" style="@titleColor@" maxLines="0">@editorial.title@</title>
+    <text class="editorial-spacer"><br/></text>
+    <!-- @/titleBlock@ -->
+    <!-- @bodyBlock@ -->
+    <text class="body-size-@editorial.bodySize@ body-weight-@editorial.bodyWeight@" maxLines="@editorial.bodyMaxLines@" moreLabel="@editorial.moreLabel@" style="@bodyColor@">@editorial.body@</text>
+    <text class="editorial-spacer"><br/></text>
+    <!-- @/bodyBlock@ -->
+    @links@
+</script>
+
+<script type="text/html" id="blocks/dv14_editorial_block/links_horizontal">
+   <list class="@listClasses@" style="@linkColor@">
+        <!-- @linkItem@ -->
+            @link@
+        <!-- @/linkItem@ -->
+    </list>
+    <text class="editorial-spacer"><br/></text>
+    <text class="editorial-spacer"><br/></text>
+</script>
+
+<script type="text/html" id="blocks/dv14_editorial_block/links_vertical">
+    <section class="@listClasses@" style="@linkColor@">
+        <!-- @linkItem@ -->
+            @link@
+            <text class="editorial-spacer"><br/></text>
+        <!-- @/linkItem@ -->
+        <text class="editorial-spacer"><br/></text>
+    </section>
+    <text class="editorial-spacer"><br/></text>
+    <text class="editorial-spacer"><br/></text>
+</script>
+
+
+<script type="text/html" id="blocks/dv14_editorial_block/wrapper_truncated">
+    <section>
+        $content$
+    </section>
+</script><script type="text/html" id="blocks/dv14_grid_block">
+    <grid class="@classes@">
+        $content$
+    </grid>
+</script>
+
+<script type="text/html" id="blocks/dv14_grid_block/banner">
+    <lockup data-url="@url@" data-content-id="@contentId@" data-page-target="@pageTarget@" class="@classes@">
+        @artwork@
+        <!-- @editorialBlock@ -->
+        @editorial@
+        <!-- @/editorialBlock@ -->
+    </lockup>
+</script><script type="text/html" id="blocks/dv14_media_block/grid">
+    <section class="media-block-grid">
+        <grid class="@classes@">
+            $content$
+        </grid>
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/list">
+    <section class="media-block-list">
+        $content$
+        <!-- @mediaItem@ -->
+        <row>
+            <column span="@spanLeft@">
+                @media@
+            </column>
+            <column span="@spanRight@">
+                <lockup>
+                    @editorial@
+                </lockup>
+            </column>
+        </row>
+
+        <divider class="divider-no-border"/>
+        <!-- @/mediaItem@ -->
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/orientation_v0">
+    <lockup class="lockup-orientation-v0 align-@alignment@" data-url="@url@" data-page-target="@pageTarget@">
+        @editorialTitle@
+        @media@
+        @editorial@
+    </lockup>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/orientation_v1">
+    <lockup class="lockup-orientation-v1 align-@alignment@" data-url="@url@" data-page-target="@pageTarget@">
+        @editorial@
+        <text class="editorial-spacer"><br/></text>
+        @media@
+    </lockup>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/orientation_v2">
+    <card class="lockup-orientation-v2 editorial-lockup-card align-@alignment@" data-url="@url@" data-page-target="@pageTarget@">
+        <lockup>
+            @media@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+        <lockup>
+            @editorial@
+        </lockup>
+    </card>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/orientation_v3">
+    <lockup class="lockup-orientation-v3 align-@alignment@" data-url="@url@" data-page-target="@pageTarget@">
+        <!-- @mediaTitleBlock@ -->
+        <title class="title-size-m uber-title-color" maxLines="0">@mediaTitle@</title>
+        <text class="editorial-spacer"><br/></text>
+        <!-- @/mediaTitleBlock@ -->
+        @media@
+        @editorial@
+    </lockup>
+</script>
+
+<script type="text/html" id="blocks/dv14_media_block/orientation_v4">
+    <card class="llockup-orientation-v4 editorial-lockup-card align-@alignment@" data-url="@url@" data-page-target="@pageTarget@">
+        <lockup>
+            @editorial@
+        </lockup>
+        <lockup>
+            @media@
+            <text class="editorial-spacer"><br/></text>
+        </lockup>
+    </card>
+</script><script type="text/html" id="blocks/dv14_row_block">
+    <section>
+        <row>
+            $columns$
+        </row>
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_row_block_iphone">
+    <section>
+        $columns$
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_row_block/column">
+    <column span="@span@">
+        @content@
+    </column>
+</script><script type="text/html" id="blocks/dv14_button_list_block/wrapper">
+    <section class="align-@align@">
+         $content$
+         <text class="editorial-spacer"><br/></text>
+    </section>
+</script>
+
+<script type="text/html" id="blocks/dv14_button_list_block/content">
+    @links@
+</script>
+
+<script type="text/html" id="blocks/dv14_button_list_block/links_horizontal">
+   <list>
+        <!-- @linkItem@ -->
+            @link@
+        <!-- @/linkItem@ -->
+    </list>
+</script>
+
+<script type="text/html" id="blocks/dv14_button_list_block/links_vertical">
+    <section>
+        <!-- @linkItem@ -->
+            @link@
+        <!-- @/linkItem@ -->
+    </section>
+</script>
