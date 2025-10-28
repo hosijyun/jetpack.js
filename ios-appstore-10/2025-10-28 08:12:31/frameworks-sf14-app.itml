@@ -1,0 +1,251 @@
+<script type="text/html" id="components/sf14_artwork">
+    <img class="@classes@" width="@width@" height="@height@" @attributes@ srcset="@srcSet@" alt="@altText@" type="@type@"/>
+</script><script type="text/html" id="components/sf14_audio">
+    <audio class="@classes@" @attributes@>
+        <asset src="@src@" keyDelivery="itunes"/>
+    </audio>
+</script>
+<script type="text/html" id="components/sf14_permission_banner">
+<section id="banner">
+	<lockup class="align-center text-center" pin="@pinStyle@" data-action="approveInPerson" data-content-id="@adamId@">
+		<title maxLines="0">@bannerText@</title>
+	</lockup>
+	<divider pin="@dividerPinStyle@" class="divider-full"/>
+</section>
+</script>
+
+<script type="text/itml" id="components/sf14_approve_message_banner">
+<section id="banner">
+	<lockup class="align-center text-center" pin="@pinStyle@">
+		<title maxLines="0">@bannerText@</title>
+	</lockup>
+	<divider pin="@dividerPinStyle@" class="divider-full"/>
+</section>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_banner">
+<section id="banner">
+    $appleMusicUpsellLockup$
+    $divider$
+</section>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_divider">
+    <divider pin="@dividerPinStyle@" class="divider-full" style="background-color: systemBackground;" />
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_button">
+    <button class="filled-buy-button bottom-right apple-music-buy-button" type="buy" style="color: @buttonColor@;">@buttonText@</button>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_button_image">
+    <button type="image" class="apple-music-buy-button-image">
+        <img type="buy" src="@buttonImg@" height="50" width="@buttonWidth@"/>
+    </button>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_close_button">
+    <button type="image" class="close-button" big-hit="true" big-hit-size="30">
+        <img src="@closeButton@" width="14" height="14" style="itml-img-mask-color: @closeButtonColor@;"/>
+    </button>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_bannerLine2">
+    <title maxLines="0" style="color:@bannerLine2Color@; font-size: 14pt; "><text>@bannerLine2@</text></title>
+</script>
+
+<script type="text/itml" id="components/sf14_apple_music_upsell_lockup">
+    <lockup style="background-color: @bgColor@;" pin="@pinStyle@" data-action="musicWinBack">
+        <list style="padding: 0 0 5">
+            <badge src="@logoImg@" style="itml-img-mask-color: @logoColor@" width="94" height="22"/>
+        </list>
+        <text maxLines="0" style="color:@bannerLine1Color@; font-size: 14pt; ">@bannerLine1@</text>
+        $bannerLine2$
+        $appleMusicUpsellCloseButton$
+        $appleMusicUpsellButton$
+    </lockup>
+</script>
+<script type="text/html" id="components/sf14_fullscreen_image">
+    <fullscreenImg class="@classes@" srcset="@srcSet@" width="@width@" height="@height@"/>
+</script>
+<script type="text/html" id="components/sf14_video">
+    <video class="@classes@" @attributes@>
+        @posterImage@
+        <asset type="@type@" src="@url@" keyDelivery="itunes"/>
+    </video>
+</script>
+<script type="text/html" id="utils/sf14_component_util/text">
+    <text @attributes@>@textContent@</text>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/text_with_badges">
+    <text @attributes@>@textContent@ @badges@</text>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/text_with_badges_on_left">
+    <text @attributes@>@badges@ @textContent@</text>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/description">
+    <description @attributes@>@textContent@</description>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/description_with_badges">
+    <description @attributes@>@textContent@ @badges@</description>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/title">
+    <title @attributes@>@textContent@</title>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/title_with_badges">
+    <title @attributes@>@textContent@ @badges@</title>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/title_with_badges_on_left">
+    <title @attributes@>@badges@ @textContent@</title>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/subtitle">
+    <subtitle @attributes@>@textContent@</subtitle>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/subtitle_with_badges">
+    <subtitle @attributes@>@textContent@ @badges@</subtitle>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/label">
+    <label>@textContent@</label>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/label_with_badges">
+    <label @attributes@>@textContent@ @badges@</label>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/label_with_badges_on_left">
+    <label @attributes@>@badges@ @textContent@</label>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/navigation_title">
+    <navigationTitle>@textContent@</navigationTitle>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/navigation_title_with_badges">
+    <navigationTitle>@textContent@ @badges@</navigationTitle>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/item">
+    <item @attributes@>@label@</item>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/date">
+    <date @attributes@>@dateContent@</date>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/duration">
+    <duration @attributes@>@durationContent@</duration>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/number">
+    <number>@numberContent@</number>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/facebook">
+    <facebook class="facebook" url="@url@" type="@type@" />
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/rottenTomatoes">
+    <text @attributes@><badge src="@imgSrc@"/> @value@</text>
+</script>
+
+<script type="text/html" id="utils/sf14_component/button">
+    <button @attributes@ type="@type@">@textContent@</button>
+</script>
+
+<script type="text/html" id="utils/sf14_component/imageButton">
+    <button @attributes@ type="@type@">
+        <text>@textContent@</text>
+        @imageContent@
+    </button>
+</script>
+
+<script type="text/html" id="utils/sf14_component/ad_button">
+    <button @attributes@ type="image" accessibilityText="ad"><img src="resource://ad_badge_small" width="22" height="13"/></button>
+</script>
+
+<script type="text/html" id="utils/sf14_component/divider">
+    <divider class="divider"/>
+</script>
+
+<script type="text/html" id="utils/sf14_component/activity">
+    <activity type="@type@"/>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/activity_indicator_template">
+    <loadingTemplate class="template">
+        <activityIndicator>
+            <text>@text@</text>
+        </activityIndicator>
+    </loadingTemplate>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/activity_indicator">
+    <activityIndicator>
+        <text>@text@</text>
+    </activityIndicator>
+</script>
+
+<script type="text/html" id="utils/sf14_component_util/star_rating">
+    <starRating value="@value@" disabled="@disabled@" type="@type@"></starRating>
+</script><script type="text/html" id="sf14_dialog_document">
+    <document>
+        <head>
+        </head>
+        <dialogTemplate type="@type@">
+            <!-- @resourceBlock@ -->
+            <img src="@resource@" />
+            <!-- @/resourceBlock@ -->
+
+            <!-- @titleBlock@ -->
+                <title>@title@</title>
+            <!-- @/titleBlock@ -->
+
+            <!-- @descriptionBlock@ -->
+              <description>@description@</description>
+            <!-- @/descriptionBlock@ -->
+
+            <!-- @positiveButtonBlock@ -->
+              @positiveButton@
+            <!-- @/positiveButtonBlock@ -->
+
+            <!-- @negativeButtonBlock@ -->
+              @negativeButton@
+            <!-- @/negativeButtonBlock@ -->
+
+            <!-- @neutralButtonBlock@ -->
+              @neutralButton@
+            <!-- @/neutralButtonBlock@ -->
+        </dialogTemplate>
+    </document>
+</script>
+<script type="text/html" id="sf14_loading_document">
+    <document>
+    	<head>
+    		$styles$
+    	</head>
+        <!-- @navigationBlock@ -->
+        $navigation$
+        <!-- @/navigationBlock@ -->
+        <loadingTemplate class="template" @attributes@>
+            <!-- @backgroundBlock@ -->
+            <background>
+                <heroImg src="@imageSrc@" width="@imageWidth@" height="@imageHeight@"/>
+            </background>
+            <!-- @/backgroundBlock@ -->
+
+            <activityIndicator>
+                <text>@text@</text>
+            </activityIndicator>
+        </loadingTemplate>
+    </document>
+</script>
