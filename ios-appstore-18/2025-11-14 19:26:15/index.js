@@ -1,0 +1,1 @@
+{"properties":{"version":"24.6.2-3","tvAppEnabledStorefronts_11_0":["143441","143455","143460"],"tvAppEnabledStorefronts_11_1":["143457","143456"],"macauStorefrontIdentifier":"143515","spamBlockingExtensionsEditorialItemID":"1490737895","localizations":{"format":"json/multi-file","path":"localization"}},"js":null,"cacheKey":"24.6.2-3-eae0d3b7-0a90-4d4c-ad1f-95bc60c6d18a"}
